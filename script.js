@@ -91,7 +91,7 @@ function showSuccessMessage() {
     const successMessage = document.createElement('div');
     successMessage.className = 'success-message show';
     successMessage.innerHTML = `
-        <strong>Success!</strong> Your spot has been reserved. We'll contact you within 24 hours to get started on your free website.
+        <strong>Success!</strong> Your project request has been submitted. We'll contact you within 24 hours with your custom website proposal.
     `;
     
     // Insert after form
@@ -138,20 +138,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function updateSpotsRemaining() {
-    // Simulate dynamic spots remaining (in real app, this would come from backend)
-    const spotsRemaining = Math.floor(Math.random() * 5) + 3; // Random between 3-7
-    
+    // Update any dynamic content if needed
     const urgencyElements = document.querySelectorAll('.urgency-note');
     urgencyElements.forEach(el => {
-        if (el.textContent.includes('10 restaurants')) {
-            el.textContent = `⚡ Only ${spotsRemaining} spots remaining this month`;
+        // Keep the professional messaging consistent
+        if (!el.textContent.includes('Professional restaurant web development')) {
+            el.textContent = '⚡ Professional restaurant web development';
         }
     });
-    
-    const formTitle = document.querySelector('.form-container h2');
-    if (formTitle && formTitle.textContent.includes('10 Spots')) {
-        formTitle.textContent = `Reserve Your Free Website (${spotsRemaining} Spots Left)`;
-    }
 }
 
 // Add click tracking for analytics (replace with actual analytics)

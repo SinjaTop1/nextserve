@@ -5,11 +5,24 @@
     box-sizing: border-box;
 }
 
+:root {
+    --next-green: #00D084;
+    --serve-black: #1a1a1a;
+    --dark-green: #00B574;
+    --light-green: #E8FFF6;
+    --accent-green: #00F094;
+    --text-dark: #1a1a1a;
+    --text-medium: #4a4a4a;
+    --text-light: #6c757d;
+    --background-light: #ffffff;
+    --background-gray: #f8f9fa;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: #1a1a1a;
-    background-color: #ffffff;
+    color: var(--text-dark);
+    background-color: var(--background-light);
 }
 
 .container {
@@ -47,10 +60,11 @@ p {
 }
 
 .highlight {
-    color: #e74c3c;
-    background: linear-gradient(120deg, #fff3f0 0%, #fff3f0 100%);
+    color: var(--next-green);
+    background: linear-gradient(120deg, var(--light-green) 0%, var(--light-green) 100%);
     padding: 0 8px;
     border-radius: 4px;
+    font-weight: 700;
 }
 
 /* Hero Section */
@@ -60,6 +74,40 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+
+/* Logo Styles */
+.logo-section {
+    margin-bottom: 2rem;
+}
+
+.brand-name {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.brand-name .next {
+    color: var(--next-green);
+    margin-right: 0.2rem;
+}
+
+.brand-name .serve {
+    color: var(--serve-black);
+    position: relative;
+}
+
+.brand-name .serve::after {
+    content: '⚔️';
+    position: absolute;
+    right: -1.2rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    font-size: 2rem;
+    opacity: 0.8;
 }
 
 .hero .container {
@@ -74,11 +122,11 @@ p {
 }
 
 .hero-headline {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: #1a1a1a;
+    color: var(--text-dark);
 }
 
 .hero-subheadline {
@@ -100,7 +148,7 @@ p {
 }
 
 .cta-primary {
-    background: #e74c3c;
+    background: var(--next-green);
     color: white;
     border: none;
     padding: 18px 36px;
@@ -109,20 +157,20 @@ p {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
     margin-bottom: 1rem;
     display: inline-block;
 }
 
 .cta-primary:hover {
-    background: #c0392b;
+    background: var(--dark-green);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 208, 132, 0.4);
 }
 
 .urgency-note {
     font-size: 0.95rem;
-    color: #e74c3c;
+    color: var(--next-green);
     font-weight: 500;
     margin: 0;
 }
@@ -215,7 +263,7 @@ p {
 }
 
 .benefit-item:hover {
-    border-color: #e74c3c;
+    border-color: var(--next-green);
     transform: translateY(-4px);
 }
 
@@ -423,14 +471,14 @@ p {
 }
 
 .step:hover {
-    border-color: #e74c3c;
+    border-color: var(--next-green);
     transform: translateY(-4px);
 }
 
 .step-number {
     width: 60px;
     height: 60px;
-    background: #e74c3c;
+    background: var(--next-green);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -454,13 +502,13 @@ p {
 /* Mid CTA */
 .mid-cta {
     padding: 60px 0;
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    background: linear-gradient(135deg, var(--next-green), var(--dark-green));
     text-align: center;
 }
 
 .mid-cta .cta-primary {
     background: #ffffff;
-    color: #e74c3c;
+    color: var(--next-green);
     font-size: 1.375rem;
     padding: 20px 40px;
 }
@@ -540,8 +588,8 @@ p {
 
 .form-group input:focus {
     outline: none;
-    border-color: #e74c3c;
-    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    border-color: var(--next-green);
+    box-shadow: 0 0 0 3px rgba(0, 208, 132, 0.1);
 }
 
 .form-submit {
@@ -571,7 +619,7 @@ p {
 }
 
 .final-cta .cta-primary {
-    background: #e74c3c;
+    background: var(--next-green);
     font-size: 1.375rem;
     padding: 20px 40px;
 }
@@ -595,6 +643,15 @@ p {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
+    }
+    
+    .brand-name {
+        font-size: 3rem;
+    }
+    
+    .brand-name .serve::after {
+        right: -0.8rem;
+        font-size: 1.5rem;
     }
     
     .hero-headline {
@@ -639,6 +696,15 @@ p {
 }
 
 @media (max-width: 480px) {
+    .brand-name {
+        font-size: 2.5rem;
+    }
+    
+    .brand-name .serve::after {
+        right: -0.6rem;
+        font-size: 1.2rem;
+    }
+    
     .hero-headline {
         font-size: 2rem;
     }
