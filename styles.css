@@ -122,8 +122,8 @@ p {
 }
 
 .hero-headline {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: var(--text-dark);
@@ -132,15 +132,49 @@ p {
 .hero-subheadline {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #495057;
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+/* Hook Section Styles */
+.hook-section {
+    margin-bottom: 2.5rem;
+}
+
+.hook-text {
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.value-props {
     margin-bottom: 1.5rem;
 }
 
-.hero-supporting {
+.value-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
     font-size: 1.125rem;
-    color: #6c757d;
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
+}
+
+.value-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    min-width: 2rem;
+}
+
+.value-text {
+    color: var(--text-dark);
+}
+
+.no-contract {
+    font-size: 1.125rem;
+    color: var(--next-green);
+    font-weight: 600;
+    margin: 0;
 }
 
 .cta-container {
@@ -189,10 +223,41 @@ p {
     display: block;
 }
 
-/* Problem & Solution Section */
-.problem-solution {
+/* Why It Works Section */
+.why-it-works {
     padding: 80px 0;
     background: #ffffff;
+    text-align: center;
+}
+
+.why-it-works h2 {
+    margin-bottom: 2rem;
+}
+
+.section-intro {
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reasons-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reason-item {
+    margin-bottom: 1.5rem;
+}
+
+.reason-item p {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
 }
 
 .problem-solution h2 {
@@ -280,6 +345,75 @@ p {
 .benefit-item p {
     color: #6c757d;
     margin: 0;
+}
+
+/* What's Included Section */
+.whats-included {
+    padding: 80px 0;
+    background: var(--background-gray);
+}
+
+.whats-included h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.package {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.free-package {
+    border: 3px solid var(--next-green);
+    position: relative;
+}
+
+.free-package::before {
+    content: 'FREE';
+    position: absolute;
+    top: -12px;
+    left: 2rem;
+    background: var(--next-green);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.growth-package {
+    border: 2px solid var(--text-light);
+}
+
+.package h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.value {
+    color: var(--next-green);
+    font-weight: 600;
+}
+
+.price {
+    color: var(--next-green);
+    font-weight: 700;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+}
+
+.package-features li {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+    font-weight: 500;
 }
 
 /* Trust Section */
@@ -519,23 +653,47 @@ p {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Fine Print */
-.fine-print {
+/* Scarcity Section */
+.scarcity-section {
     padding: 60px 0;
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    text-align: center;
+    border-top: 3px solid #f39c12;
+    border-bottom: 3px solid #f39c12;
+}
+
+.scarcity-content h2 {
+    font-size: 2rem;
+    color: #d68910;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.scarcity-content p {
+    font-size: 1.25rem;
+    color: #b7950b;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Risk Reversal Section */
+.risk-reversal {
+    padding: 60px 0;
+    background: var(--light-green);
     text-align: center;
 }
 
-.fine-print h2 {
+.risk-reversal h2 {
     margin-bottom: 1.5rem;
-    color: #1a1a1a;
+    color: var(--text-dark);
 }
 
-.fine-print p {
-    max-width: 700px;
+.risk-reversal p {
+    max-width: 600px;
     margin: 0 auto;
-    font-size: 1.125rem;
-    color: #495057;
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    font-weight: 500;
 }
 
 /* Form Section */
@@ -627,14 +785,20 @@ p {
 /* Footer */
 .footer {
     padding: 40px 0;
-    background: #1a1a1a;
+    background: var(--serve-black);
     color: #e9ecef;
     text-align: center;
 }
 
 .footer p {
-    margin: 0;
+    margin: 0.5rem 0;
     color: #adb5bd;
+    font-size: 1.125rem;
+}
+
+.footer p:first-child {
+    font-size: 1.25rem;
+    color: #ffffff;
 }
 
 /* Mobile Responsiveness */
@@ -660,6 +824,22 @@ p {
     
     .hero-subheadline {
         font-size: 1.25rem;
+    }
+    
+    .hook-text {
+        font-size: 1.125rem;
+    }
+    
+    .value-item {
+        font-size: 1rem;
+    }
+    
+    .scarcity-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .package {
+        padding: 2rem;
     }
     
     h2 {
@@ -707,6 +887,18 @@ p {
     
     .hero-headline {
         font-size: 2rem;
+    }
+    
+    .hook-text {
+        font-size: 1rem;
+    }
+    
+    .value-item {
+        font-size: 0.95rem;
+    }
+    
+    .scarcity-content h2 {
+        font-size: 1.25rem;
     }
     
     .cta-primary {

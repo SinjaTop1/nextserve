@@ -91,7 +91,7 @@ function showSuccessMessage() {
     const successMessage = document.createElement('div');
     successMessage.className = 'success-message show';
     successMessage.innerHTML = `
-        <strong>Success!</strong> Your project request has been submitted. We'll contact you within 24 hours with your custom website proposal.
+        <strong>Success!</strong> Your FREE website build has been reserved! We'll contact you within 24 hours to get started.
     `;
     
     // Insert after form
@@ -138,14 +138,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function updateSpotsRemaining() {
-    // Update any dynamic content if needed
-    const urgencyElements = document.querySelectorAll('.urgency-note');
-    urgencyElements.forEach(el => {
-        // Keep the professional messaging consistent
-        if (!el.textContent.includes('Professional restaurant web development')) {
-            el.textContent = '⚡ Professional restaurant web development';
+    // Simulate dynamic spots remaining (in real app, this would come from backend)
+    const spotsRemaining = Math.floor(Math.random() * 4) + 3; // Random between 3-6
+    
+    // Update scarcity messaging
+    const scarcityElements = document.querySelectorAll('.scarcity-content h2');
+    scarcityElements.forEach(el => {
+        if (el.textContent.includes('10 free builds')) {
+            el.textContent = `⚠️ We only take ${spotsRemaining} free builds this month to keep quality high.`;
         }
     });
+    
+    const formTitle = document.querySelector('.form-container h2');
+    if (formTitle && formTitle.textContent.includes('FREE Website Build')) {
+        // Keep the main form title, but could update subtitle
+        const formSubtitle = document.querySelector('.form-subtitle');
+        if (formSubtitle) {
+            formSubtitle.textContent = `Fill out this form to secure one of the ${spotsRemaining} spots available this month.`;
+        }
+    }
 }
 
 // Add click tracking for analytics (replace with actual analytics)
