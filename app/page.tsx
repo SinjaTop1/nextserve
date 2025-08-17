@@ -168,20 +168,11 @@ export default function Home() {
                     <p className="text-base md:text-lg text-gray-600">(one-time)</p>
                   </div>
                   
-                  {/* Alex Hormozi ROI Emphasis */}
-                  <div className="bg-green-100 border-2 border-green-300 rounded-xl p-4 mb-6">
-                    <h4 className="text-lg md:text-xl font-black text-green-800 mb-2">💰 PAYS FOR ITSELF:</h4>
-                    <p className="text-green-700 font-bold text-sm md:text-base">
-                      Just 4 new membership clients at €75/month = €300/month recurring
-                    </p>
-                    <p className="text-green-600 text-sm md:text-base">
-                      Your €900 investment paid back in 3 months, then pure profit forever.
-                    </p>
+                  {/* Clean ROI Emphasis */}
+                  <div className="bg-green-500 text-white rounded-xl p-4 mb-4">
+                    <p className="font-black text-lg">💰 4 clients = Investment paid back</p>
+                    <p className="text-sm">Then pure profit forever</p>
                   </div>
-                  
-                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                    Best for clinics ready to stop running from visit to visit and start building predictable revenue.
-                  </p>
                 </div>
                 
                 <div>
@@ -215,18 +206,16 @@ export default function Home() {
                 </div>
                 
                 <div className="bg-primary-50 rounded-2xl p-4 md:p-6">
-                  <h4 className="text-lg md:text-xl font-bold text-primary-800 mb-4">👉 Outcome:</h4>
-                  <p className="text-primary-700 leading-relaxed text-sm md:text-base mb-4">
-                    If you follow our steps, you'll free up admin time, reduce no-shows, and start seeing 
-                    the first wave of recurring membership revenue in your practice.
+                  <h4 className="text-lg md:text-xl font-bold text-primary-800 mb-3">👉 Result:</h4>
+                  <p className="text-primary-700 font-semibold text-sm md:text-base mb-4">
+                    Predictable monthly revenue + time freedom
                   </p>
                   <div className="bg-red-500 text-white rounded-lg p-3 mb-4">
-                    <p className="font-bold text-sm md:text-base">🛡️ 100% MONEY-BACK GUARANTEE</p>
-                    <p className="text-xs md:text-sm">Don't see results? Full refund, no questions asked.</p>
+                    <p className="font-bold text-sm">🛡️ 100% MONEY-BACK GUARANTEE</p>
                   </div>
                   <a 
                     href="#contact"
-                    className="w-full btn-primary mt-4 text-center inline-block text-sm md:text-base py-3 md:py-4"
+                    className="w-full btn-primary mt-2 text-center inline-block text-sm md:text-base py-3 md:py-4"
                   >
                     Get Started Now
                   </a>
@@ -252,23 +241,11 @@ export default function Home() {
                     <div className="text-3xl md:text-4xl font-black text-accent-600 mb-2">€1,000 setup + €850/month</div>
                   </div>
                   
-                  {/* Alex Hormozi INSANE ROI Emphasis */}
-                  <div className="bg-accent-100 border-2 border-accent-400 rounded-xl p-4 mb-6">
-                    <h4 className="text-lg md:text-xl font-black text-accent-800 mb-2">🚀 INSANE ROI:</h4>
-                    <p className="text-accent-700 font-bold text-sm md:text-base mb-2">
-                      Only €100 more setup than Starter, but Google optimization alone brings 10-20 clients monthly!
-                    </p>
-                    <p className="text-accent-600 text-sm md:text-base mb-2">
-                      Each client = €200+ average visit × 2 visits/year = €400+/client
-                    </p>
-                    <p className="text-accent-800 font-black text-sm md:text-base">
-                      10 clients × €400 = €4,000+ monthly revenue vs €850 cost = 470% ROI
-                    </p>
+                  {/* Clean ROI Emphasis */}
+                  <div className="bg-accent-500 text-white rounded-xl p-4 mb-4">
+                    <p className="font-black text-lg">🚀 Google SEO = €4,000+ monthly</p>
+                    <p className="text-sm">vs €850 cost = 470% ROI</p>
                   </div>
-                  
-                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                    For clinics who want a complete, self-running growth system that pays for itself many times over.
-                  </p>
                 </div>
                 
                 <div>
@@ -306,23 +283,19 @@ export default function Home() {
                 </div>
                 
                 <div className="bg-accent-50 rounded-2xl p-4 md:p-6 border-2 border-accent-200">
-                  <h4 className="text-lg md:text-xl font-bold text-accent-800 mb-4">👉 Outcome:</h4>
-                  <p className="text-accent-700 leading-relaxed text-sm md:text-base mb-4">
-                    If you follow our steps, you'll turn your membership into a growth engine — bringing in new clients 
-                    every month, keeping existing ones longer, and starting to see memberships contribute a meaningful 
-                    share of your monthly revenue.
+                  <h4 className="text-lg md:text-xl font-bold text-accent-800 mb-3">👉 Result:</h4>
+                  <p className="text-accent-700 font-semibold text-sm md:text-base mb-4">
+                    Self-running growth machine
                   </p>
-                  <div className="bg-green-500 text-white rounded-lg p-3 mb-4">
-                    <p className="font-black text-sm md:text-base">💸 THIS PLAN LITERALLY PAYS YOU</p>
-                    <p className="text-xs md:text-sm">Google SEO alone = €4,000+ monthly vs €850 cost</p>
+                  <div className="bg-green-500 text-white rounded-lg p-3 mb-3">
+                    <p className="font-black text-sm">💸 THIS PLAN PAYS YOU</p>
                   </div>
                   <div className="bg-red-500 text-white rounded-lg p-3 mb-4">
-                    <p className="font-bold text-sm md:text-base">🛡️ 100% MONEY-BACK GUARANTEE</p>
-                    <p className="text-xs md:text-sm">Don't see results? Full refund, no questions asked.</p>
+                    <p className="font-bold text-sm">🛡️ 100% MONEY-BACK GUARANTEE</p>
                   </div>
                   <a 
                     href="#contact"
-                    className="w-full bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mt-4 text-center inline-block text-sm md:text-base"
+                    className="w-full bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center inline-block text-sm md:text-base"
                   >
                     Get Started Now
                   </a>
@@ -437,78 +410,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Limited-Time Bonus Section */}
-      <section className="py-20 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
+      {/* EXPLOSIVE FREE GIFT Section */}
+      <section className="py-12 md:py-20 bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-6xl font-black mb-6">
-              🎁 Limited-Time Bonus
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-4xl md:text-6xl font-black mb-4 md:mb-6">
+              🎁 INSANE FREE GIFT
             </h2>
-            <p className="text-2xl text-accent-100 mb-4">
-              (First 10 Clinics Only)
+            <p className="text-xl md:text-2xl font-black mb-6">
+              Worth More Than Most Charge For Entire Programs!
             </p>
-            <div className="bg-white/20 backdrop-blur rounded-2xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-3xl font-black mb-6">
-                Get our Pet Food Revenue Engine FREE
-              </h3>
-              <p className="text-xl text-accent-100 mb-6">
-                (normally €1,500+)
-              </p>
+            
+            <div className="bg-black/30 backdrop-blur rounded-3xl p-6 md:p-10 max-w-5xl mx-auto border-4 border-yellow-400">
+              <div className="bg-yellow-400 text-black rounded-2xl p-4 md:p-6 mb-6">
+                <h3 className="text-3xl md:text-4xl font-black mb-2">
+                  Pet Food Revenue Engine
+                </h3>
+                <p className="text-xl md:text-2xl font-bold">
+                  VALUE: €1,500+ • YOUR PRICE: €0
+                </p>
+              </div>
               
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/10 rounded-xl p-4">
-                  <CheckCircle className="h-8 w-8 text-white mb-2 mx-auto" />
-                  <p className="font-semibold">Cuts food costs, increases profit</p>
+              <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8">
+                <div className="bg-green-500 rounded-xl p-4 text-center">
+                  <p className="font-black text-lg">💰 €2k-€5k</p>
+                  <p className="text-sm">Extra Monthly Revenue</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-4">
-                  <CheckCircle className="h-8 w-8 text-white mb-2 mx-auto" />
-                  <p className="font-semibold">Creates a sticky reason for clients to stay on membership</p>
+                <div className="bg-blue-500 rounded-xl p-4 text-center">
+                  <p className="font-black text-lg">🔒 Sticky Clients</p>
+                  <p className="text-sm">Never Leave Your Clinic</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-4">
-                  <CheckCircle className="h-8 w-8 text-white mb-2 mx-auto" />
-                  <p className="font-semibold">Typically adds €2k–€5k/month</p>
+                <div className="bg-purple-500 rounded-xl p-4 text-center">
+                  <p className="font-black text-lg">📈 Higher Profits</p>
+                  <p className="text-sm">Cut Food Costs</p>
                 </div>
               </div>
               
-              <div className="bg-red-500 text-white rounded-xl p-4 mb-8">
-                <p className="text-xl font-bold">
-                  ⚠️ Only 10 slots. After that, this bonus is gone.
+              <div className="bg-red-500 text-white rounded-xl p-4 mb-6">
+                <p className="text-lg md:text-xl font-black mb-2">
+                  ⚠️ ONLY 10 CLINICS GET THIS
+                </p>
+                <p className="text-sm md:text-base">
+                  After that, you pay full €1,500+ or wait 6 months
                 </p>
               </div>
               
               <a 
                 href="#contact"
-                className="bg-white text-accent-600 hover:bg-gray-100 font-black py-6 px-12 rounded-xl text-xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1 inline-block"
+                className="bg-yellow-400 text-black hover:bg-yellow-300 font-black py-4 md:py-6 px-8 md:px-12 rounded-xl text-lg md:text-xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1 inline-block"
               >
-                Claim Your Bonus Now
+                🎁 CLAIM YOUR FREE €1,500+ GIFT NOW
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Referral Program Banner */}
-      <section className="py-20 bg-gradient-to-r from-primary-500 to-primary-600 text-white">
+      {/* INSANE REFERRAL PROGRAM */}
+      <section className="py-12 md:py-20 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-black mb-8">
-              🔁 Referral Rewards
+            <h2 className="text-4xl md:text-6xl font-black mb-6 md:mb-8">
+              🔥 REFERRAL GOLDMINE
             </h2>
-            <div className="bg-white/20 backdrop-blur rounded-3xl p-10 max-w-4xl mx-auto">
-              <UserPlus className="h-20 w-20 text-white mx-auto mb-6" />
-              <h3 className="text-3xl font-black mb-6">
-                For every clinic you refer, you get 1 free month
-              </h3>
-              <p className="text-2xl text-primary-100 mb-6">
-                (worth up to €1,800)
-              </p>
-              <div className="bg-accent-500 rounded-2xl p-6 mb-8">
-                <p className="text-xl font-bold text-white">
-                  Yes, they stack — in theory, you could run the program for free forever.
+            <p className="text-xl md:text-2xl font-black mb-8">
+              The Easiest Money You'll Ever Make!
+            </p>
+            
+            <div className="bg-black/30 backdrop-blur rounded-3xl p-6 md:p-10 max-w-5xl mx-auto border-4 border-green-400">
+              <div className="bg-green-400 text-black rounded-2xl p-4 md:p-6 mb-6">
+                <UserPlus className="h-16 w-16 md:h-20 md:w-20 mx-auto mb-4" />
+                <h3 className="text-3xl md:text-4xl font-black mb-2">
+                  1 Referral = 1 FREE MONTH
+                </h3>
+                <p className="text-xl md:text-2xl font-bold">
+                  VALUE: Up to €1,800 PER REFERRAL
                 </p>
               </div>
-              <p className="text-lg text-primary-100">
-                Know another vet who needs predictable revenue? We'll reward you both.
+              
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-yellow-500 text-black rounded-xl p-6 text-center">
+                  <p className="font-black text-2xl mb-2">♾️ UNLIMITED</p>
+                  <p className="text-lg font-bold">Stack Forever</p>
+                  <p className="text-sm">5 referrals = 5 free months</p>
+                </div>
+                <div className="bg-purple-500 rounded-xl p-6 text-center">
+                  <p className="font-black text-2xl mb-2">💰 FREE FOREVER</p>
+                  <p className="text-lg font-bold">Theoretical Possibility</p>
+                  <p className="text-sm">Enough referrals = Never pay again</p>
+                </div>
+              </div>
+              
+              <div className="bg-green-500 rounded-2xl p-4 md:p-6 mb-6">
+                <p className="text-lg md:text-xl font-black text-center">
+                  💡 Know 3 vets? That's €5,400 in free value!
+                </p>
+              </div>
+              
+              <p className="text-lg md:text-xl text-center mb-6">
+                We reward BOTH you and your referral. Win-win-win! 🎯
               </p>
             </div>
           </div>
