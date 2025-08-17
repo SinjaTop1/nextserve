@@ -1,6 +1,3 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import { 
   Heart, 
   TrendingUp, 
@@ -22,16 +19,6 @@ import {
 } from 'lucide-react'
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
-
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <main className="min-h-screen bg-white">
       {/* Navigation */}
@@ -42,12 +29,12 @@ export default function Home() {
               <Heart className="h-8 w-8 text-primary-500 mr-2" />
               <span className="text-2xl font-bold text-gray-900">NextServe</span>
             </div>
-            <button 
-              onClick={scrollToContact}
+            <a 
+              href="#contact"
               className="btn-primary text-sm md:text-base"
             >
               Book Free Call
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -56,7 +43,7 @@ export default function Home() {
       <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
-            <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+            <div className="animate-fade-in">
               <h1 className="text-4xl md:text-7xl font-black text-gray-900 leading-tight mb-8">
                 🚀 Turn Your Veterinary Practice Into a <span className="text-primary-500">Predictable, Profitable Business</span> — Without Adding Extra Work
               </h1>
@@ -64,13 +51,13 @@ export default function Home() {
                 We help veterinary clinics create reliable recurring revenue, attract new clients, 
                 and cut admin time in half — with just <span className="text-accent-500 font-bold">2–3 hours of your time</span> to get started.
               </p>
-              <button 
-                onClick={scrollToContact}
-                className="btn-primary text-xl px-12 py-6 group shadow-2xl"
+              <a 
+                href="#contact"
+                className="btn-primary text-xl px-12 py-6 group shadow-2xl inline-flex items-center"
               >
                 Get My Free Growth Strategy Call
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
               <p className="text-lg text-gray-500 mt-4">
                 ⚠️ Only 10 slots available this month
               </p>
@@ -192,12 +179,12 @@ export default function Home() {
                     If you follow our steps, you'll free up admin time, reduce no-shows, and start seeing 
                     the first wave of recurring membership revenue in your practice.
                   </p>
-                  <button 
-                    onClick={scrollToContact}
-                    className="w-full btn-primary mt-6"
-                  >
-                    Get Started Now
-                  </button>
+                                <a 
+                href="#contact"
+                className="w-full btn-primary mt-6 text-center inline-block"
+              >
+                Get Started Now
+              </a>
                 </div>
               </div>
             </div>
@@ -265,12 +252,12 @@ export default function Home() {
                     every month, keeping existing ones longer, and starting to see memberships contribute a meaningful 
                     share of your monthly revenue.
                   </p>
-                  <button 
-                    onClick={scrollToContact}
-                    className="w-full bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mt-6"
+                  <a 
+                    href="#contact"
+                    className="w-full bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mt-6 text-center inline-block"
                   >
                     Get Started Now
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -323,12 +310,12 @@ export default function Home() {
                     If you follow our steps, you'll have a system that runs almost entirely without you — scaling 
                     memberships, marketing, and retention in the background, while you focus on patients.
                   </p>
-                  <button 
-                    onClick={scrollToContact}
-                    className="w-full btn-outline mt-6 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-gray-900"
+                  <a 
+                    href="#contact"
+                    className="w-full btn-outline mt-6 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-gray-900 text-center inline-block"
                   >
                     Get Started Now
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -421,12 +408,12 @@ export default function Home() {
                 </p>
               </div>
               
-              <button 
-                onClick={scrollToContact}
-                className="bg-white text-accent-600 hover:bg-gray-100 font-black py-6 px-12 rounded-xl text-xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1"
+              <a 
+                href="#contact"
+                className="bg-white text-accent-600 hover:bg-gray-100 font-black py-6 px-12 rounded-xl text-xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1 inline-block"
               >
                 Claim Your Bonus Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -476,13 +463,13 @@ export default function Home() {
               improve retention, and build recurring revenue — with just 2-3 hours of your time.
             </p>
             
-            <button 
-              onClick={scrollToContact}
-              className="bg-accent-500 hover:bg-accent-600 text-white font-black py-6 px-16 rounded-xl text-2xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1 mb-12 group"
+            <a 
+              href="#contact"
+              className="bg-accent-500 hover:bg-accent-600 text-white font-black py-6 px-16 rounded-xl text-2xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1 mb-12 group inline-flex items-center"
             >
               Get My Free Growth Strategy Call
               <ArrowRight className="ml-3 h-8 w-8 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
             
             <div className="bg-red-500 text-white rounded-xl p-4 max-w-md mx-auto mb-12">
               <p className="font-bold text-lg">
