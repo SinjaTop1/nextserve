@@ -532,7 +532,7 @@ export default function Home() {
             </p>
             
             {/* Professional urgency messaging */}
-            <div className="bg-primary-50 border border-primary-200 rounded-2xl p-4 md:p-6 mb-8 md:mb-12 mx-4 md:mx-auto max-w-4xl">
+            <div className="bg-primary-50 border border-primary-200 rounded-2xl p-4 md:p-6 mb-8 md:mb-12 mx-auto max-w-4xl">
               <h3 className="text-xl md:text-2xl font-bold text-primary-800 mb-3">📅 Limited Availability</h3>
               <p className="text-primary-700 text-sm md:text-base mb-2">
                 We're currently accepting 10 new clinics this month for personalized onboarding.
@@ -544,13 +544,13 @@ export default function Home() {
             
             <a 
               href="mailto:info@nextserve.com?subject=Free Growth Strategy Call Request"
-              className="bg-accent-500 hover:bg-accent-600 text-white font-black py-4 md:py-6 px-8 md:px-16 rounded-xl text-lg md:text-2xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1 mb-8 md:mb-12 group inline-flex items-center mx-4"
+              className="bg-accent-500 hover:bg-accent-600 text-white font-black py-4 md:py-6 px-8 md:px-16 rounded-xl text-lg md:text-2xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1 mb-8 md:mb-12 group inline-flex items-center"
             >
               Get My Free Growth Strategy Call
               <ArrowRight className="ml-2 md:ml-3 h-6 w-6 md:h-8 md:w-8 group-hover:translate-x-1 transition-transform" />
             </a>
             
-            <div className="bg-gray-100 text-gray-800 rounded-xl p-3 md:p-4 max-w-md mx-auto mb-8 md:mb-12 mx-4">
+            <div className="bg-gray-100 text-gray-800 rounded-xl p-3 md:p-4 max-w-md mx-auto mb-8 md:mb-12">
               <p className="font-bold text-base md:text-lg">
                 📋 10 spots available this month
               </p>
