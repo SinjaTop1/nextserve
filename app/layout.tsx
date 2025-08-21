@@ -2,9 +2,12 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'NextServe - Veterinary Growth Solutions | Vienna',
-  description: 'More Clients. Higher Retention. Predictable Growth for Your Veterinary Clinic. Vienna\'s only complete growth partner for veterinary clinics.',
-  keywords: 'veterinary marketing, vet clinic growth, Vienna veterinary, pet clinic marketing, veterinary membership, vet referrals',
+  title: 'NextServe - Add €5,000+ Monthly Revenue to Your Veterinary Practice',
+  description: 'Add €5,000+ monthly recurring revenue to your veterinary practice in 90 days. Guaranteed results or you don\'t pay. Professional membership systems, automation, and client acquisition for Vienna veterinary clinics.',
+  keywords: 'veterinary marketing, vet clinic growth, Vienna veterinary, pet clinic marketing, veterinary membership, vet referrals, recurring revenue, veterinary automation',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

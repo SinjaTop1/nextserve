@@ -9,18 +9,33 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          500: '#14b8a6', // teal
-          600: '#0d9488',
-          700: '#0f766e',
+          50: '#fefcf8', // milk cream - lightest
+          100: '#fdf8f0', // milk cream
+          200: '#f7f1e8', // soft cream
+          500: '#1f2937', // elegant dark gray/black
+          600: '#111827',
+          700: '#0f172a',
+          800: '#030712', // deep black
+          900: '#000000', // pure black
         },
         accent: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          500: '#f97316', // orange
-          600: '#ea580c',
-          700: '#c2410c',
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          500: '#059669', // elegant forest green - used sparingly
+          600: '#047857',
+          700: '#065f46',
+        },
+        cream: {
+          50: '#fefcf8',
+          100: '#fdf8f0',
+          200: '#f7f1e8',
+          300: '#f0e6d6',
+        },
+        success: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          500: '#059669',
+          600: '#047857',
         },
       },
       fontFamily: {
