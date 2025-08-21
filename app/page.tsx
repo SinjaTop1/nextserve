@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { 
   Heart, 
   CheckCircle, 
-  Phone, 
   Mail, 
   MapPin,
   ArrowRight,
@@ -420,11 +419,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-primary-400 mr-4" />
-                  <span className="text-lg">hello@nextserve.at</span>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-primary-400 mr-4" />
-                  <span className="text-lg">+43 1 234 5678</span>
+                  <span className="text-lg">nextserveagency@gmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-6 w-6 text-primary-400 mr-4" />
