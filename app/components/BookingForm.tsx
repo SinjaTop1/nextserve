@@ -64,41 +64,69 @@ Interest: ${formData.interest}
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         {isSubmitted ? (
-          <div className="p-8 text-center">
-            <CheckCircle className="h-16 w-16 text-success-500 mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Request Submitted Successfully!
+          <div className="p-8 text-center bg-gradient-to-r from-green-50 to-accent-50">
+            <div className="text-6xl mb-4">🎉</div>
+            <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-6" />
+            <h3 className="text-3xl font-black text-green-800 mb-4">
+              Your FREE Package is Reserved!
             </h3>
-            <p className="text-lg text-gray-600 mb-6">
-              We'll contact you within 24 hours to schedule your free strategy call.
+            <div className="bg-green-500 text-white rounded-lg p-4 mb-6">
+              <p className="text-lg font-bold mb-2">🎁 You're getting €4,300 worth of value FREE:</p>
+              <div className="text-sm space-y-1">
+                <div>✅ Professional Website (€2,000 value)</div>
+                <div>✅ Online Booking System (€1,500 value)</div>
+                <div>✅ KPI Dashboard (€800 value)</div>
+              </div>
+            </div>
+            <p className="text-lg text-gray-700 mb-6">
+              <span className="font-bold text-green-600">Next steps:</span><br/>
+              We'll analyze your clinic and start building your website within 24 hours.<br/>
+              Everything will be ready in 48 hours - completely FREE!
             </p>
             <button
               onClick={onClose}
-              className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-8 rounded-lg"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg"
             >
-              Close
+              🎉 Awesome! Close
             </button>
           </div>
         ) : (
           <>
-            <div className="flex justify-between items-center p-6 border-b border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-900">Book Your Free Strategy Call</h2>
+            <div className="flex justify-between items-center p-6 border-b border-gray-200 bg-gradient-to-r from-red-500 to-accent-500 text-white">
+              <div>
+                <div className="text-sm font-bold mb-1">🎁 100% FREE - NO CATCH</div>
+                <h2 className="text-2xl font-bold">Claim Your FREE Website + Diagnosis</h2>
+              </div>
               <button
                 onClick={onClose}
-                className="text-gray-400 hover:text-gray-600 p-2"
+                className="text-white hover:text-gray-200 p-2"
               >
                 <X className="h-6 w-6" />
               </button>
             </div>
 
             <form onSubmit={handleSubmit} className="p-6 space-y-6">
-              <div className="bg-accent-50 border border-accent-200 rounded-lg p-4 mb-6">
-                <div className="flex items-center mb-2">
-                  <Calendar className="h-5 w-5 text-accent-600 mr-2" />
-                  <span className="font-bold text-accent-800">30-Minute Call</span>
+              <div className="bg-gradient-to-r from-red-50 to-accent-50 border-2 border-red-200 rounded-lg p-6 mb-6">
+                <div className="text-center mb-4">
+                  <div className="text-3xl mb-2">🎁</div>
+                  <span className="font-black text-xl text-red-600">€4,300 VALUE - COMPLETELY FREE</span>
                 </div>
-                <p className="text-sm text-accent-700">
-                  We'll analyze your current situation and show you exactly how to add €5,000+ monthly recurring revenue.
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                  <div className="bg-white rounded-lg p-3 text-center border-2 border-red-200">
+                    <div className="font-bold text-red-600">✅ Website</div>
+                    <div className="text-gray-600">€2,000 value</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 text-center border-2 border-red-200">
+                    <div className="font-bold text-red-600">✅ Booking System</div>
+                    <div className="text-gray-600">€1,500 value</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 text-center border-2 border-red-200">
+                    <div className="font-bold text-red-600">✅ KPI Dashboard</div>
+                    <div className="text-gray-600">€800 value</div>
+                  </div>
+                </div>
+                <p className="text-center text-sm text-red-700 font-bold mt-3">
+                  No credit card required • Ready in 48 hours • Yours to keep forever
                 </p>
               </div>
 
@@ -201,25 +229,26 @@ Interest: ${formData.interest}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
                 >
-                  <option value="">Choose your priority</option>
-                  <option value="full-system">Complete Growth System (Most Popular)</option>
-                  <option value="booking-only">Online Booking System Only</option>
-                  <option value="website-only">Professional Website Only</option>
-                  <option value="marketing">Marketing & Client Acquisition</option>
-                  <option value="membership">Membership Program Setup</option>
+                  <option value="">What's your biggest challenge?</option>
+                  <option value="free-diagnosis">I want the FREE website + diagnosis (Most Popular)</option>
+                  <option value="no-online-presence">No professional website</option>
+                  <option value="manual-bookings">Still taking bookings by phone</option>
+                  <option value="no-tracking">Can't track my clinic's performance</option>
+                  <option value="low-revenue">Inconsistent monthly revenue</option>
+                  <option value="other">Other challenge</option>
                 </select>
               </div>
 
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+              <div className="bg-gradient-to-r from-green-50 to-accent-50 border-2 border-green-200 rounded-lg p-4">
                 <div className="flex items-start">
-                  <Target className="h-5 w-5 text-primary-600 mr-3 mt-1 flex-shrink-0" />
+                  <Target className="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">What to expect on the call:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• Analysis of your current client acquisition</li>
-                      <li>• Custom growth strategy for your clinic</li>
-                      <li>• Exact ROI projections for your situation</li>
-                      <li>• No-pressure consultation (we'll tell you if we're not a good fit)</li>
+                    <h4 className="font-bold text-green-800 mb-2">🚀 What happens after you apply:</h4>
+                    <ul className="text-sm text-green-700 space-y-1 font-medium">
+                      <li>• We analyze your clinic's needs (24 hours)</li>
+                      <li>• Our team builds your website + booking system (48 hours)</li>
+                      <li>• You get everything delivered FREE - no strings attached</li>
+                      <li>• Optional: Discuss growth opportunities (your choice)</li>
                     </ul>
                   </div>
                 </div>
@@ -228,9 +257,9 @@ Interest: ${formData.interest}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-accent-500 hover:bg-accent-600 disabled:bg-gray-400 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200"
+                className="w-full bg-red-500 hover:bg-red-600 disabled:bg-gray-400 text-white font-black py-6 px-8 rounded-lg text-xl transition-all duration-200 border-4 border-yellow-400 transform hover:scale-105"
               >
-                {isSubmitting ? 'Submitting...' : 'Book My Free Strategy Call'}
+                {isSubmitting ? '⏳ Submitting...' : '🎁 CLAIM MY FREE €4,300 PACKAGE'}
               </button>
 
               <p className="text-xs text-gray-500 text-center">

@@ -34,9 +34,9 @@ export default function Home() {
             </div>
             <button 
               onClick={() => setIsBookingOpen(true)}
-              className="btn-primary text-sm md:text-base"
+              className="bg-red-500 hover:bg-red-600 text-white font-bold text-sm md:text-base px-4 py-2 rounded-lg border-2 border-yellow-400 animate-pulse"
             >
-              Book Free Call
+              🎁 GET FREE WEBSITE
             </button>
           </div>
         </div>
@@ -47,34 +47,251 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
             <div className="animate-fade-in">
+              {/* FREE Offer Badge */}
+              <div className="inline-block bg-red-500 text-white px-6 py-2 rounded-full text-lg font-black mb-6 animate-pulse">
+                🎁 100% FREE - NO CATCH
+              </div>
+              
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-primary-800 leading-tight mb-6 md:mb-8">
-                Add <span className="text-accent-500">€5,000+ Monthly Recurring Revenue</span> to Your Veterinary Practice in 90 Days
+                Get Your <span className="text-accent-500">Complete Business Diagnosis</span> + Professional Website + Booking System
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-primary-600 mb-8 md:mb-12 font-semibold leading-relaxed px-2">
-                Without hiring more staff, working longer hours, or expensive advertising. 
-                <span className="text-accent-500 font-bold"> Guaranteed results or you don't pay.</span>
+                We'll build you a professional website with online booking system AND a KPI dashboard - completely FREE. 
+                <span className="text-accent-500 font-bold"> No strings attached. No credit card required.</span>
               </p>
               
-              {/* Value proposition box */}
-              <div className="bg-accent-500 text-white rounded-2xl p-4 md:p-6 mb-8 md:mb-12 mx-2 md:mx-auto max-w-4xl">
-                <p className="text-lg md:text-xl font-bold mb-2">
-                  ✅ Average client adds €8,400 recurring revenue in first 6 months
-                </p>
-                <p className="text-base md:text-lg">
-                  Setup takes 2 hours. <span className="font-black">100% MONEY-BACK GUARANTEE</span>
-                </p>
+              {/* FREE Value proposition box */}
+              <div className="bg-gradient-to-r from-accent-500 to-green-600 text-white rounded-2xl p-6 md:p-8 mb-8 md:mb-12 mx-2 md:mx-auto max-w-5xl border-4 border-yellow-400">
+                <h3 className="text-2xl md:text-3xl font-black mb-4">🚀 YOU GET ALL THIS FOR FREE:</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-left">
+                  <div className="bg-white/20 rounded-lg p-4">
+                    <h4 className="font-bold text-lg mb-2">✅ Professional Website</h4>
+                    <p className="text-sm">Worth €2,000 - Mobile optimized, SEO ready</p>
+                  </div>
+                  <div className="bg-white/20 rounded-lg p-4">
+                    <h4 className="font-bold text-lg mb-2">✅ Online Booking System</h4>
+                    <p className="text-sm">Worth €1,500 - 24/7 automated appointments</p>
+                  </div>
+                  <div className="bg-white/20 rounded-lg p-4">
+                    <h4 className="font-bold text-lg mb-2">✅ KPI Dashboard</h4>
+                    <p className="text-sm">Worth €800 - Track your clinic's performance</p>
+                  </div>
+                </div>
+                <div className="bg-yellow-400 text-black rounded-lg p-3 mt-4">
+                  <p className="text-lg font-black">Total Value: €4,300 - YOURS FREE!</p>
+                </div>
               </div>
               
               <button 
                 onClick={() => setIsBookingOpen(true)}
-                className="btn-primary text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 group shadow-2xl inline-flex items-center mx-2"
+                className="bg-red-500 hover:bg-red-600 text-white font-black text-xl md:text-2xl px-12 md:px-16 py-6 md:py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200 group inline-flex items-center mx-2 border-4 border-yellow-400"
               >
-                Get My Free Revenue Analysis
-                <ArrowRight className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
+                🎁 GET MY FREE WEBSITE + DIAGNOSIS
+                <ArrowRight className="ml-3 h-8 w-8 group-hover:translate-x-2 transition-transform" />
               </button>
-              <p className="text-base md:text-lg text-gray-500 mt-3 md:mt-4 px-4">
-                ⏰ Only 10 spots available this month
+              <p className="text-lg md:text-xl text-red-600 font-black mt-4 px-4 animate-pulse">
+                ⏰ ONLY 5 FREE SPOTS LEFT THIS WEEK!
               </p>
+              <p className="text-base text-gray-600 mt-2">
+                No payment required • Takes 5 minutes to apply • Ready in 48 hours
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FREE Diagnostic Process Section */}
+      <section className="py-16 md:py-24 bg-white border-t-4 border-accent-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-black text-primary-800 mb-6">
+              Here's How Our <span className="text-accent-500">FREE Diagnosis</span> Works
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
+              We diagnose your clinic's growth potential and build your complete digital foundation - 100% free
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-accent-500 rounded-full p-6 w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white font-black text-3xl">1</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">5-Minute Application</h3>
+              <p className="text-lg text-gray-600">
+                Tell us about your clinic, current challenges, and goals. Takes less time than making coffee.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-accent-500 rounded-full p-6 w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white font-black text-3xl">2</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">We Build Everything</h3>
+              <p className="text-lg text-gray-600">
+                Our team creates your professional website, booking system, and KPI dashboard in 48 hours.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-accent-500 rounded-full p-6 w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white font-black text-3xl">3</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">You Get Everything FREE</h3>
+              <p className="text-lg text-gray-600">
+                Launch your new digital presence immediately. Start accepting online bookings and tracking performance.
+              </p>
+            </div>
+          </div>
+
+          {/* Why We Do This For Free */}
+          <div className="bg-gradient-to-r from-gray-50 to-cream-100 rounded-3xl p-8 md:p-12 text-center">
+            <h3 className="text-3xl md:text-4xl font-black text-primary-800 mb-6">
+              "But Why Would You Do This For FREE?"
+            </h3>
+            <p className="text-xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
+              Simple. We know that once you see the quality of our work and the immediate results, 
+              you'll want to work with us on scaling your practice further. It's our way of proving our value upfront.
+            </p>
+            <div className="bg-accent-500 text-white rounded-2xl p-6 max-w-3xl mx-auto">
+              <p className="text-lg font-bold">
+                "Most agencies ask for money first, then deliver results. We deliver results first, then earn your business."
+              </p>
+              <p className="text-sm mt-2 opacity-90">- NextServe Promise</p>
+            </div>
+          </div>
+
+          {/* Second CTA */}
+          <div className="text-center mt-16">
+            <button 
+              onClick={() => setIsBookingOpen(true)}
+              className="bg-red-500 hover:bg-red-600 text-white font-black text-xl md:text-2xl px-12 md:px-16 py-6 md:py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200 group inline-flex items-center border-4 border-yellow-400"
+            >
+              🎁 CLAIM MY FREE WEBSITE NOW
+              <ArrowRight className="ml-3 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+            </button>
+            <p className="text-lg text-red-600 font-black mt-4 animate-pulse">
+              ⚡ Next batch starts Monday - Don't miss out!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ / Objection Handling Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-gray-50 to-cream-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-primary-800 mb-6">
+              "But Wait... What's The <span className="text-red-500">CATCH</span>?"
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We get this question a lot. Here are the most common concerns about our FREE diagnostic:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-red-200">
+              <div className="flex items-start mb-4">
+                <div className="bg-red-500 rounded-full p-2 mr-4 mt-1">
+                  <span className="text-white font-bold">Q</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    "Why would you build a €4,300 system for free?"
+                  </h3>
+                  <p className="text-gray-700">
+                    Simple: We're confident in our work. Once you see the quality and results, 
+                    you'll want to work with us to scale further. It's our way of earning your trust upfront 
+                    instead of asking for it.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-red-200">
+              <div className="flex items-start mb-4">
+                <div className="bg-red-500 rounded-full p-2 mr-4 mt-1">
+                  <span className="text-white font-bold">Q</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    "Will you try to sell me something afterward?"
+                  </h3>
+                  <p className="text-gray-700">
+                    Only if YOU ask. We'll show you optional ways to scale further, but there's zero pressure. 
+                    Your free system works perfectly on its own. Many clinics stick with just the free version.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-red-200">
+              <div className="flex items-start mb-4">
+                <div className="bg-red-500 rounded-full p-2 mr-4 mt-1">
+                  <span className="text-white font-bold">Q</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    "Is this actually professional quality?"
+                  </h3>
+                  <p className="text-gray-700">
+                    Absolutely. We use the same team and process for our free diagnostics as our paid clients. 
+                    The only difference is you're not paying us (yet). We can't afford to deliver poor quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-red-200">
+              <div className="flex items-start mb-4">
+                <div className="bg-red-500 rounded-full p-2 mr-4 mt-1">
+                  <span className="text-white font-bold">Q</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    "What if I don't like it?"
+                  </h3>
+                  <p className="text-gray-700">
+                    Keep it anyway! It's yours forever, no strings attached. We're not going to take back 
+                    your website because you don't want to work with us further. That would be petty.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="bg-accent-500 rounded-3xl p-8 md:p-12 text-white text-center">
+            <h3 className="text-3xl font-black mb-8">Here's What Makes This Risk-Free For You:</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Shield className="h-8 w-8" />
+                </div>
+                <h4 className="text-xl font-bold mb-2">No Contracts</h4>
+                <p>No long-term commitments. Your free system is yours to keep forever.</p>
+              </div>
+              <div>
+                <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="h-8 w-8" />
+                </div>
+                <h4 className="text-xl font-bold mb-2">No Credit Card</h4>
+                <p>We don't even ask for payment information. Completely free means free.</p>
+              </div>
+              <div>
+                <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Heart className="h-8 w-8" />
+                </div>
+                <h4 className="text-xl font-bold mb-2">Vienna-Based</h4>
+                <p>We're local. You can find us, visit us, or meet us in person anytime.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -167,15 +384,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Upgrade Paths Section */}
       <section className="py-12 md:py-20 bg-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
+            <div className="bg-accent-500 text-white px-6 py-3 rounded-full text-lg font-bold inline-block mb-6">
+              📈 AFTER YOUR FREE DIAGNOSIS
+            </div>
             <h2 className="text-3xl md:text-5xl font-black text-primary-800 mb-6 md:mb-8">
-              Choose Your Growth Level
+              Ready to Scale Even Further?
             </h2>
             <p className="text-xl text-primary-600 max-w-4xl mx-auto leading-relaxed">
-              Each plan builds on the previous one. Start where you're comfortable, upgrade when you're ready.
+              Once you see the results from your FREE website + booking system, here are your optional upgrade paths.
+              <span className="text-accent-600 font-bold"> No pressure - your free system works great on its own!</span>
             </p>
           </div>
           
@@ -358,49 +579,66 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-primary-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-primary-800 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-accent-900/20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="bg-red-500 text-white px-8 py-3 rounded-full text-xl font-black inline-block mb-8 animate-pulse border-4 border-yellow-400">
+            🚨 LAST CHANCE - FREE OFFER ENDS SOON!
+          </div>
+          
           <h2 className="text-4xl md:text-6xl font-black mb-8">
-            Ready to Add €5,000+ Monthly Recurring Revenue?
+            Get Your <span className="text-yellow-400">€4,300 Value Package</span> Completely FREE
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Book your free strategy call. We'll analyze your practice and show you exactly how much revenue you can add in the next 90 days.
+          <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Don't pay thousands for a website and booking system. Get it all FREE in our business diagnosis program.
+            <span className="text-yellow-400 font-bold"> Limited spots available!</span>
           </p>
           
-          <div className="bg-accent-500 rounded-2xl p-8 max-w-2xl mx-auto mb-12">
-            <h3 className="text-2xl font-bold mb-4">On this 30-minute call, you'll get:</h3>
-            <ul className="text-left space-y-3">
-              <li className="flex items-center">
-                <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-                <span>Custom revenue projection for your clinic</span>
-              </li>
-              <li className="flex items-center">
-                <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-                <span>Exact strategy to get your first 20 members</span>
-              </li>
-              <li className="flex items-center">
-                <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-                <span>No-pressure consultation (we'll tell you if we're not right for you)</span>
-              </li>
-            </ul>
+          <div className="bg-gradient-to-r from-accent-500 to-green-600 rounded-2xl p-8 max-w-4xl mx-auto mb-12 border-4 border-yellow-400">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">🎁 Your FREE Package Includes:</h3>
+            <div className="grid md:grid-cols-2 gap-4 text-left">
+              <div className="flex items-center">
+                <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0 text-yellow-400" />
+                <span className="text-lg">Professional Website (€2,000 value)</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0 text-yellow-400" />
+                <span className="text-lg">Online Booking System (€1,500 value)</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0 text-yellow-400" />
+                <span className="text-lg">KPI Dashboard (€800 value)</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0 text-yellow-400" />
+                <span className="text-lg">Complete Business Diagnosis</span>
+              </div>
+            </div>
+            <div className="bg-yellow-400 text-black rounded-lg p-4 mt-6">
+              <p className="text-xl font-black">Total Value: €4,300 - Yours FREE!</p>
+            </div>
           </div>
           
           <button
             onClick={() => setIsBookingOpen(true)}
-            className="bg-accent-500 hover:bg-accent-600 text-white font-black py-6 px-12 rounded-xl text-2xl shadow-2xl transition-all duration-200 transform hover:-translate-y-1 mb-8 group inline-flex items-center"
+            className="bg-red-500 hover:bg-red-600 text-white font-black py-8 px-16 rounded-xl text-2xl md:text-3xl shadow-2xl transition-all duration-200 transform hover:scale-105 mb-8 group inline-flex items-center border-4 border-yellow-400"
           >
-            Book My Free Revenue Analysis
-            <ArrowRight className="ml-3 h-8 w-8 group-hover:translate-x-1 transition-transform" />
+            🎁 CLAIM MY FREE €4,300 PACKAGE
+            <ArrowRight className="ml-4 h-10 w-10 group-hover:translate-x-2 transition-transform" />
           </button>
           
-          <div className="bg-gray-100 text-gray-800 rounded-xl p-4 max-w-md mx-auto">
-            <p className="font-bold text-lg">
-              ⏰ 10 spots available this month
+          <div className="bg-yellow-400 text-black rounded-xl p-6 max-w-lg mx-auto animate-pulse">
+            <p className="font-black text-xl mb-2">
+              ⏰ ONLY 3 SPOTS LEFT THIS WEEK!
             </p>
-            <p className="text-gray-600">
-              Next intake starts Q2 2024
+            <p className="text-lg font-bold">
+              Next free batch: Not until next month
             </p>
           </div>
+          
+          <p className="text-gray-400 mt-6 text-lg">
+            No credit card • No contracts • No catch • Ready in 48 hours
+          </p>
         </div>
       </section>
 
