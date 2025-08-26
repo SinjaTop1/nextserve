@@ -18,6 +18,7 @@ import {
   TrendingUp
 } from 'lucide-react'
 import BookingForm from './components/BookingForm'
+import ScrollTriggeredVideo from './components/ScrollTriggeredVideo'
 
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
@@ -147,20 +148,51 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Why We Do This For Free */}
-          <div className="bg-gradient-to-r from-gray-50 to-cream-100 rounded-3xl p-8 md:p-12 text-center">
-            <h3 className="text-3xl md:text-4xl font-black text-primary-800 mb-6">
-              "But Why Would You Do This For FREE?"
-            </h3>
-            <p className="text-xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
-              Simple. We know that once you see the quality of our work and the immediate results, 
-              you'll want to work with us on scaling your practice further. It's our way of proving our value upfront.
-            </p>
-            <div className="bg-accent-500 text-white rounded-2xl p-6 max-w-3xl mx-auto">
-              <p className="text-lg font-bold">
-                "Most agencies ask for money first, then deliver results. We deliver results first, then earn your business."
+          {/* Why We Do This For Free - Enhanced with Video */}
+          <div className="bg-gradient-to-r from-gray-50 to-cream-100 rounded-3xl p-8 md:p-12">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl md:text-4xl font-black text-primary-800 mb-6">
+                "But Why Would You Do This For FREE?"
+              </h3>
+              <p className="text-xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
+                Don't just take our word for it. Here's a personal message explaining exactly why we're doing this for free:
               </p>
-              <p className="text-sm mt-2 opacity-90">- NextServe Promise</p>
+            </div>
+
+            {/* Video Container - Properly Sized */}
+            <div className="max-w-sm mx-auto mb-12">
+              <div className="relative mb-4">
+                <ScrollTriggeredVideo 
+                  src="/landingpagew.mov"
+                  className="w-full aspect-video"
+                />
+              </div>
+              {/* Video Title Below Video */}
+              <div className="bg-white rounded-lg shadow-lg p-3 border-2 border-accent-500">
+                <div className="flex items-center">
+                  <div className="bg-accent-500 rounded-full p-1.5 mr-2">
+                    <span className="text-white font-bold text-xs">▶</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-base">Why NextServe Works For Free</h4>
+                    <p className="text-gray-600 text-xs">Personal message from our founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Text Content Below Video */}
+            <div className="text-center">
+              <p className="text-xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
+                Simple. We know that once you see the quality of our work and the immediate results, 
+                you'll want to work with us on scaling your practice further. It's our way of proving our value upfront.
+              </p>
+              <div className="bg-accent-500 text-white rounded-2xl p-6 max-w-3xl mx-auto">
+                <p className="text-lg font-bold">
+                  "Most agencies ask for money first, then deliver results. We deliver results first, then earn your business."
+                </p>
+                <p className="text-sm mt-2 opacity-90">- NextServe Promise</p>
+              </div>
             </div>
           </div>
 
