@@ -30,12 +30,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Heart className="h-8 w-8 text-primary-500 mr-2" />
-              <span className="text-2xl font-bold text-gray-900">NextServe</span>
+              <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-primary-500 mr-1.5 sm:mr-2" />
+              <span className="text-xl sm:text-2xl font-bold text-gray-900">NextServe</span>
             </div>
             <button 
               onClick={() => setIsBookingOpen(true)}
-              className="bg-red-500 hover:bg-red-600 text-white font-bold text-sm md:text-base px-4 py-2 rounded-lg border-2 border-yellow-400 animate-pulse"
+              className="bg-red-500 hover:bg-red-600 text-white font-bold text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg border-2 border-yellow-400 animate-pulse whitespace-nowrap"
             >
               🎁 GET FREE WEBSITE
             </button>
@@ -53,29 +53,29 @@ export default function Home() {
                 🎁 100% FREE - NO CATCH
               </div>
               
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-primary-800 leading-tight mb-6 md:mb-8">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-primary-800 leading-tight mb-4 sm:mb-6 md:mb-8 px-2">
                 Get Your <span className="text-accent-500">Complete Business Diagnosis</span> + Professional Website + Booking System
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-primary-600 mb-8 md:mb-12 font-semibold leading-relaxed px-2">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-600 mb-6 sm:mb-8 md:mb-12 font-semibold leading-relaxed px-4">
                 We'll build you a professional website with online booking system AND a KPI dashboard - completely FREE. 
                 <span className="text-accent-500 font-bold"> No strings attached. No credit card required.</span>
               </p>
               
               {/* FREE Value proposition box */}
-              <div className="bg-gradient-to-r from-accent-500 to-green-600 text-white rounded-2xl p-6 md:p-8 mb-8 md:mb-12 mx-2 md:mx-auto max-w-5xl border-4 border-yellow-400">
-                <h3 className="text-2xl md:text-3xl font-black mb-4">🚀 YOU GET ALL THIS FOR FREE:</h3>
-                <div className="grid md:grid-cols-3 gap-4 text-left">
-                  <div className="bg-white/20 rounded-lg p-4">
-                    <h4 className="font-bold text-lg mb-2">✅ Professional Website</h4>
-                    <p className="text-sm">Worth €2,000 - Mobile optimized, SEO ready</p>
+              <div className="bg-gradient-to-r from-accent-500 to-green-600 text-white rounded-2xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 md:mb-12 mx-2 md:mx-auto max-w-5xl border-4 border-yellow-400">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-4">🚀 YOU GET ALL THIS FOR FREE:</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 text-left">
+                  <div className="bg-white/20 rounded-lg p-3 sm:p-4">
+                    <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">✅ Professional Website</h4>
+                    <p className="text-xs sm:text-sm">Worth €2,000 - Mobile optimized, SEO ready</p>
                   </div>
-                  <div className="bg-white/20 rounded-lg p-4">
-                    <h4 className="font-bold text-lg mb-2">✅ Online Booking System</h4>
-                    <p className="text-sm">Worth €1,500 - 24/7 automated appointments</p>
+                  <div className="bg-white/20 rounded-lg p-3 sm:p-4">
+                    <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">✅ Online Booking System</h4>
+                    <p className="text-xs sm:text-sm">Worth €1,500 - 24/7 automated appointments</p>
                   </div>
-                  <div className="bg-white/20 rounded-lg p-4">
-                    <h4 className="font-bold text-lg mb-2">✅ KPI Dashboard</h4>
-                    <p className="text-sm">Worth €800 - Track your clinic's performance</p>
+                  <div className="bg-white/20 rounded-lg p-3 sm:p-4 sm:col-span-2 md:col-span-1">
+                    <h4 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">✅ KPI Dashboard</h4>
+                    <p className="text-xs sm:text-sm">Worth €800 - Track your clinic's performance</p>
                   </div>
                 </div>
                 <div className="bg-yellow-400 text-black rounded-lg p-3 mt-4">
@@ -85,10 +85,11 @@ export default function Home() {
               
               <button 
                 onClick={() => setIsBookingOpen(true)}
-                className="bg-red-500 hover:bg-red-600 text-white font-black text-xl md:text-2xl px-12 md:px-16 py-6 md:py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200 group inline-flex items-center mx-2 border-4 border-yellow-400"
+                className="bg-red-500 hover:bg-red-600 text-white font-black text-lg sm:text-xl md:text-2xl px-6 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-5 md:py-6 lg:py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200 group inline-flex items-center mx-2 border-4 border-yellow-400 max-w-full"
               >
-                🎁 GET MY FREE WEBSITE + DIAGNOSIS
-                <ArrowRight className="ml-3 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+                <span className="block sm:hidden">🎁 GET FREE WEBSITE</span>
+                <span className="hidden sm:block">🎁 GET MY FREE WEBSITE + DIAGNOSIS</span>
+                <ArrowRight className="ml-2 sm:ml-3 h-6 w-6 sm:h-8 sm:w-8 group-hover:translate-x-2 transition-transform" />
               </button>
               <p className="text-lg md:text-xl text-red-600 font-black mt-4 px-4 animate-pulse">
                 ⏰ ONLY 5 FREE SPOTS LEFT THIS WEEK!
@@ -432,9 +433,9 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
             {/* Starter Plan */}
-            <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 p-8 relative">
+            <div className="bg-white rounded-2xl shadow-xl border-2 border-gray-200 p-6 sm:p-8 relative">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-black text-gray-900 mb-4">Foundation</h3>
                 <div className="text-4xl font-black text-primary-600 mb-2">€900</div>
@@ -474,7 +475,7 @@ export default function Home() {
             </div>
 
             {/* Growth Plan - Most Popular */}
-            <div className="bg-white rounded-2xl shadow-2xl border-4 border-accent-500 p-8 relative transform scale-105">
+            <div className="bg-white rounded-2xl shadow-2xl border-4 border-accent-500 p-6 sm:p-8 relative transform sm:scale-105">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-accent-500 text-white px-6 py-2 rounded-full text-sm font-black">
                   MOST POPULAR
@@ -521,7 +522,7 @@ export default function Home() {
             </div>
 
             {/* Premium Plan */}
-            <div className="bg-primary-800 text-white rounded-2xl shadow-xl p-8 relative">
+            <div className="bg-primary-800 text-white rounded-2xl shadow-xl p-6 sm:p-8 relative">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-black mb-4">Scale</h3>
                 <div className="text-4xl font-black text-primary-400 mb-2">€2,500 + €1,800/mo</div>
@@ -576,8 +577,8 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="bg-success-50 rounded-3xl p-8 text-center border-2 border-success-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="bg-success-50 rounded-3xl p-6 sm:p-8 text-center border-2 border-success-200">
               <div className="bg-success-500 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                 <Shield className="h-10 w-10 text-white" />
               </div>
@@ -587,7 +588,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="bg-accent-50 rounded-3xl p-8 text-center border-2 border-accent-200">
+            <div className="bg-accent-50 rounded-3xl p-6 sm:p-8 text-center border-2 border-accent-200">
               <div className="bg-accent-500 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                 <DollarSign className="h-10 w-10 text-white" />
               </div>
@@ -597,7 +598,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="bg-primary-50 rounded-3xl p-8 text-center border-2 border-primary-200">
+            <div className="bg-primary-50 rounded-3xl p-6 sm:p-8 text-center border-2 border-primary-200">
               <div className="bg-primary-500 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                 <Zap className="h-10 w-10 text-white" />
               </div>
@@ -653,10 +654,10 @@ export default function Home() {
           
           <button
             onClick={() => setIsBookingOpen(true)}
-            className="bg-red-500 hover:bg-red-600 text-white font-black py-8 px-16 rounded-xl text-2xl md:text-3xl shadow-2xl transition-all duration-200 transform hover:scale-105 mb-8 group inline-flex items-center border-4 border-yellow-400"
+            className="bg-red-500 hover:bg-red-600 text-white font-black py-4 sm:py-6 md:py-8 px-6 sm:px-10 md:px-16 rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl shadow-2xl transition-all duration-200 transform hover:scale-105 mb-6 sm:mb-8 group inline-flex items-center border-4 border-yellow-400 max-w-full"
           >
             🎁 CLAIM MY FREE €4,300 PACKAGE
-            <ArrowRight className="ml-4 h-10 w-10 group-hover:translate-x-2 transition-transform" />
+            <ArrowRight className="ml-2 sm:ml-3 md:ml-4 h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 group-hover:translate-x-2 transition-transform" />
           </button>
           
           <div className="bg-yellow-400 text-black rounded-xl p-6 max-w-lg mx-auto animate-pulse">

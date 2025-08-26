@@ -143,25 +143,27 @@ export default function ScrollTriggeredVideo({ src, className = '', poster }: Sc
         )}
         
         {/* Video Status Indicator */}
-        <div className="absolute top-2 right-2">
-          <div className={`px-2 py-1 rounded-full text-xs font-bold ${
+        <div className="absolute top-1 sm:top-2 right-1 sm:right-2">
+          <div className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-xs font-bold ${
             isVisible && isPlaying 
               ? 'bg-green-500 text-white' 
               : 'bg-black/50 text-white/70'
           }`}>
-            {isVisible && isPlaying ? '● LIVE' : '● PAUSED'}
+            <span className="hidden sm:inline">{isVisible && isPlaying ? '● LIVE' : '● PAUSED'}</span>
+            <span className="sm:hidden">{isVisible && isPlaying ? '●' : '○'}</span>
           </div>
         </div>
         
         {/* Sound Indicator */}
         {isPlaying && (
-          <div className="absolute top-2 left-2">
-            <div className={`px-2 py-1 rounded-full text-xs font-bold ${
+          <div className="absolute top-1 sm:top-2 left-1 sm:left-2">
+            <div className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-xs font-bold ${
               isMuted 
                 ? 'bg-yellow-500 text-black animate-pulse' 
                 : 'bg-green-500 text-white'
             }`}>
-              {isMuted ? '🔇 Click to unmute' : '🔊 Click to mute'}
+              <span className="hidden sm:inline">{isMuted ? '🔇 Click to unmute' : '🔊 Click to mute'}</span>
+              <span className="sm:hidden">{isMuted ? '🔇' : '🔊'}</span>
             </div>
           </div>
         )}

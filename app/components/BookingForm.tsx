@@ -61,8 +61,8 @@ Interest: ${formData.interest}
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-2 sm:p-4">
+      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
         {isSubmitted ? (
           <div className="p-8 text-center bg-gradient-to-r from-green-50 to-accent-50">
             <div className="text-6xl mb-4">🎉</div>
@@ -105,13 +105,13 @@ Interest: ${formData.interest}
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="p-6 space-y-6">
-              <div className="bg-gradient-to-r from-red-50 to-accent-50 border-2 border-red-200 rounded-lg p-6 mb-6">
+            <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-4 sm:space-y-6">
+              <div className="bg-gradient-to-r from-red-50 to-accent-50 border-2 border-red-200 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
                 <div className="text-center mb-4">
                   <div className="text-3xl mb-2">🎁</div>
                   <span className="font-black text-xl text-red-600">€4,300 VALUE - COMPLETELY FREE</span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm">
                   <div className="bg-white rounded-lg p-3 text-center border-2 border-red-200">
                     <div className="font-bold text-red-600">✅ Website</div>
                     <div className="text-gray-600">€2,000 value</div>
@@ -130,7 +130,7 @@ Interest: ${formData.interest}
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">
                     Your Name *
@@ -142,7 +142,7 @@ Interest: ${formData.interest}
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 text-base"
                     placeholder="Dr. Maria Schmidt"
                   />
                 </div>
@@ -158,7 +158,7 @@ Interest: ${formData.interest}
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 text-base"
                     placeholder="maria@veterinaryclinic.at"
                   />
                 </div>
@@ -257,7 +257,7 @@ Interest: ${formData.interest}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-red-500 hover:bg-red-600 disabled:bg-gray-400 text-white font-black py-6 px-8 rounded-lg text-xl transition-all duration-200 border-4 border-yellow-400 transform hover:scale-105"
+                className="w-full bg-red-500 hover:bg-red-600 disabled:bg-gray-400 text-white font-black py-4 sm:py-6 px-4 sm:px-8 rounded-lg text-lg sm:text-xl transition-all duration-200 border-4 border-yellow-400 transform hover:scale-105"
               >
                 {isSubmitting ? '⏳ Submitting...' : '🎁 CLAIM MY FREE €4,300 PACKAGE'}
               </button>
