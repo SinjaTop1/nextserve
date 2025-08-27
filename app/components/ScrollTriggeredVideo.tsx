@@ -47,7 +47,6 @@ export default function ScrollTriggeredVideo({ src, className = '' }: ScrollTrig
       loop
       playsInline
       preload="metadata"
-      loading="lazy"
       aria-label="NextServe founder explaining why we offer free veterinary websites"
     >
       Your browser does not support the video tag.

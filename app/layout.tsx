@@ -4,6 +4,7 @@ import GoogleAnalytics from './components/GoogleAnalytics'
 import StructuredData from './components/StructuredData'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nextserve.at'),
   title: 'Free Veterinary Website + €5,000+ Monthly Revenue System | NextServe Vienna',
   description: 'Get your professional veterinary website + online booking system + KPI dashboard completely FREE. Add €5,000+ monthly recurring revenue to your Vienna vet practice in 90 days. No credit card required.',
   keywords: 'free veterinary website, vet clinic marketing Vienna, veterinary online booking system, pet clinic growth, veterinary membership programs, Vienna veterinary services, vet practice automation, veterinary recurring revenue, pet clinic SEO, veterinary digital marketing',
