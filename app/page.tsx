@@ -32,25 +32,28 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-40 border-b border-gray-100">
+      <header>
+        <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-40 border-b border-gray-100" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-primary-500 mr-1.5 sm:mr-2" />
+              <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-primary-500 mr-1.5 sm:mr-2" aria-hidden="true" />
               <span className="text-xl sm:text-2xl font-bold text-gray-900">NextServe</span>
             </div>
             <button 
               onClick={() => handleBookingClick('nav_button')}
               className="bg-red-500 hover:bg-red-600 text-white font-bold text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg border-2 border-yellow-400 animate-pulse whitespace-nowrap"
+              aria-label="Get your free veterinary website - Book consultation"
             >
               🎁 GET FREE WEBSITE
             </button>
           </div>
         </div>
-      </nav>
+        </nav>
+      </header>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-12 md:pt-24 md:pb-16 bg-gradient-to-br from-cream-100 to-white">
+      <section className="pt-20 pb-12 md:pt-24 md:pb-16 bg-gradient-to-br from-cream-100 to-white" aria-labelledby="hero-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
             <div className="animate-fade-in">
@@ -59,9 +62,9 @@ export default function Home() {
                 🎁 100% FREE - NO CATCH
               </div>
               
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-primary-800 leading-tight mb-4 sm:mb-6 md:mb-8 px-2">
-                Get Your <span className="text-accent-500">Complete Business Diagnosis</span> + Professional Website + Booking System
-              </h1>
+                             <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-primary-800 leading-tight mb-4 sm:mb-6 md:mb-8 px-2">
+                 Get Your <span className="text-accent-500">Complete Business Diagnosis</span> + Professional Website + Booking System
+               </h1>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-600 mb-6 sm:mb-8 md:mb-12 font-semibold leading-relaxed px-4">
                 We'll build you a professional website with online booking system AND a KPI dashboard - completely FREE. 
                 <span className="text-accent-500 font-bold"> No strings attached. No credit card required.</span>
