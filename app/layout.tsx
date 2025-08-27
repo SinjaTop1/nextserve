@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import GoogleAnalytics from './components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: 'NextServe - Add €5,000+ Monthly Revenue to Your Veterinary Practice',
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   )
 }

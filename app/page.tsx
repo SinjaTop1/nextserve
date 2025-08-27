@@ -19,9 +19,15 @@ import {
 } from 'lucide-react'
 import BookingForm from './components/BookingForm'
 import ScrollTriggeredVideo from './components/ScrollTriggeredVideo'
+import { trackEvent } from './components/GoogleAnalytics'
 
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
+
+  const handleBookingClick = (source: string) => {
+    trackEvent('cta_click', 'booking', source, 1)
+    setIsBookingOpen(true)
+  }
 
   return (
     <main className="min-h-screen bg-white">
@@ -34,7 +40,7 @@ export default function Home() {
               <span className="text-xl sm:text-2xl font-bold text-gray-900">NextServe</span>
             </div>
             <button 
-              onClick={() => setIsBookingOpen(true)}
+              onClick={() => handleBookingClick('nav_button')}
               className="bg-red-500 hover:bg-red-600 text-white font-bold text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg border-2 border-yellow-400 animate-pulse whitespace-nowrap"
             >
               🎁 GET FREE WEBSITE
@@ -83,10 +89,10 @@ export default function Home() {
                 </div>
               </div>
               
-              <button 
-                onClick={() => setIsBookingOpen(true)}
-                className="bg-red-500 hover:bg-red-600 text-white font-black text-lg sm:text-xl md:text-2xl px-6 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-5 md:py-6 lg:py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200 group inline-flex items-center mx-2 border-4 border-yellow-400 max-w-full"
-              >
+                             <button 
+                 onClick={() => handleBookingClick('hero_main')}
+                 className="bg-red-500 hover:bg-red-600 text-white font-black text-lg sm:text-xl md:text-2xl px-6 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-5 md:py-6 lg:py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200 group inline-flex items-center mx-2 border-4 border-yellow-400 max-w-full"
+               >
                 <span className="block sm:hidden">🎁 GET FREE WEBSITE</span>
                 <span className="hidden sm:block">🎁 GET MY FREE WEBSITE + DIAGNOSIS</span>
                 <ArrowRight className="ml-2 sm:ml-3 h-6 w-6 sm:h-8 sm:w-8 group-hover:translate-x-2 transition-transform" />

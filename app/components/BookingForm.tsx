@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { CheckCircle, X, Calendar, Building, Users, Target } from 'lucide-react'
+import { trackEvent } from './GoogleAnalytics'
 
 export default function BookingForm({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [formData, setFormData] = useState({
@@ -41,6 +42,8 @@ Interest: ${formData.interest}
 
       if (response.ok) {
         setIsSubmitted(true)
+        // Track successful form submission
+        trackEvent('form_submit', 'booking', 'free_website_request', 1)
       } else {
         throw new Error('Form submission failed')
       }
