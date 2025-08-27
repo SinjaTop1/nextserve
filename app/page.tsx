@@ -169,23 +169,25 @@ export default function Home() {
               </p>
             </div>
 
-                         {/* Video Container - Large and Prominent */}
-             <div className="max-w-4xl mx-auto mb-12">
-               <div className="relative mb-6">
-                 <ScrollTriggeredVideo 
-                   src="/landingpagew.mov"
-                   className="w-full aspect-video rounded-xl shadow-2xl border-4 border-accent-500"
-                 />
-               </div>
-               {/* Video Title Below Video */}
-               <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 border-2 border-accent-500 max-w-2xl mx-auto">
+                         {/* Video Container */}
+             <div className="max-w-2xl mx-auto mb-8">
+               <video 
+                 src="/landingpagew.mov"
+                 className="w-full rounded-lg shadow-lg"
+                 controls
+                 preload="metadata"
+               >
+                 Your browser does not support the video tag.
+               </video>
+               {/* Video Title */}
+               <div className="bg-white rounded-lg shadow-lg p-3 mt-4 border-2 border-accent-500">
                  <div className="flex items-center">
-                   <div className="bg-accent-500 rounded-full p-2 mr-3">
-                     <span className="text-white font-bold text-sm">▶</span>
+                   <div className="bg-accent-500 rounded-full p-1.5 mr-2">
+                     <span className="text-white font-bold text-xs">▶</span>
                    </div>
                    <div>
-                     <h4 className="font-bold text-gray-900 text-lg md:text-xl">Why NextServe Works For Free</h4>
-                     <p className="text-gray-600 text-sm md:text-base">Personal message from our founder</p>
+                     <h4 className="font-bold text-gray-900 text-base">Why NextServe Works For Free</h4>
+                     <p className="text-gray-600 text-xs">Personal message from our founder</p>
                    </div>
                  </div>
                </div>
