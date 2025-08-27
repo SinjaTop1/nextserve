@@ -4,7 +4,7 @@ import GoogleAnalytics from './components/GoogleAnalytics'
 import StructuredData from './components/StructuredData'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nextserve.at'),
+  metadataBase: new URL('https://nextserve.org'),
   title: 'Free Veterinary Website + €5,000+ Monthly Revenue System | NextServe Vienna',
   description: 'Get your professional veterinary website + online booking system + KPI dashboard completely FREE. Add €5,000+ monthly recurring revenue to your Vienna vet practice in 90 days. No credit card required.',
   keywords: 'free veterinary website, vet clinic marketing Vienna, veterinary online booking system, pet clinic growth, veterinary membership programs, Vienna veterinary services, vet practice automation, veterinary recurring revenue, pet clinic SEO, veterinary digital marketing',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_AT',
-    url: 'https://nextserve.at',
+    url: 'https://nextserve.org',
     siteName: 'NextServe - Veterinary Growth Solutions',
     title: 'Free Veterinary Website + €5,000+ Monthly Revenue System',
     description: 'Get your professional veterinary website + online booking system + KPI dashboard completely FREE. Add €5,000+ monthly recurring revenue to your Vienna vet practice.',
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     creator: '@NextServeAgency',
   },
   alternates: {
-    canonical: 'https://nextserve.at',
+    canonical: 'https://nextserve.org',
     languages: {
-      'en-AT': 'https://nextserve.at',
-      'de-AT': 'https://nextserve.at/de',
+      'en-AT': 'https://nextserve.org',
+      'de-AT': 'https://nextserve.org/de',
     },
   },
   category: 'Veterinary Services',

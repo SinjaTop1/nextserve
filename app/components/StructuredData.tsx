@@ -6,9 +6,9 @@ export default function StructuredData() {
     '@type': 'Organization',
     name: 'NextServe - Veterinary Growth Solutions',
     alternateName: 'NextServe Agency',
-    url: 'https://nextserve.at',
-    logo: 'https://nextserve.at/logo.png',
-    image: 'https://nextserve.at/og-image.jpg',
+    url: 'https://nextserve.org',
+    logo: 'https://nextserve.org/logo.png',
+    image: 'https://nextserve.org/og-image.jpg',
     description: 'Professional veterinary practice growth solutions including free websites, online booking systems, and revenue optimization for Vienna veterinary clinics.',
     email: 'nextserveagency@gmail.com',
     address: {
@@ -135,12 +135,12 @@ export default function StructuredData() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://nextserve.at/#business',
+    '@id': 'https://nextserve.org/#business',
     name: 'NextServe - Veterinary Growth Solutions',
-    image: 'https://nextserve.at/og-image.jpg',
+    image: 'https://nextserve.org/og-image.jpg',
     telephone: '+43-1-234-5678',
     email: 'nextserveagency@gmail.com',
-    url: 'https://nextserve.at',
+    url: 'https://nextserve.org',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Vienna',

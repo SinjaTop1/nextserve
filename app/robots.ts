@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://nextserve.at/sitemap.xml',
+    sitemap: 'https://nextserve.org/sitemap.xml',
   }
 }
