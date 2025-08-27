@@ -44,6 +44,7 @@ export default function ScrollTriggeredVideo({ src, className = '' }: ScrollTrig
       src={src}
       className={`rounded-lg shadow-lg ${className}`}
       muted
+      controls
       loop
       playsInline
       preload="metadata"

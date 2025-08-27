@@ -170,15 +170,12 @@ export default function Home() {
             </div>
 
                          {/* Video Container */}
-             <div className="max-w-2xl mx-auto mb-8">
-               <video 
+             <div className="max-w-md mx-auto mb-8">
+               <ScrollTriggeredVideo 
                  src="/landingpagew.mov"
                  className="w-full rounded-lg shadow-lg"
-                 controls
-                 preload="metadata"
-               >
-                 Your browser does not support the video tag.
-               </video>
+               />
+             </div>
                {/* Video Title */}
                <div className="bg-white rounded-lg shadow-lg p-3 mt-4 border-2 border-accent-500">
                  <div className="flex items-center">
