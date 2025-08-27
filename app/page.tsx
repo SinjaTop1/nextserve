@@ -49,7 +49,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        </nav>
+      </nav>
       </header>
 
       {/* Hero Section */}
@@ -64,7 +64,7 @@ export default function Home() {
               
                              <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-primary-800 leading-tight mb-4 sm:mb-6 md:mb-8 px-2">
                  Get Your <span className="text-accent-500">Complete Business Diagnosis</span> + Professional Website + Booking System
-               </h1>
+              </h1>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-600 mb-6 sm:mb-8 md:mb-12 font-semibold leading-relaxed px-4">
                 We'll build you a professional website with online booking system AND a KPI dashboard - completely FREE. 
                 <span className="text-accent-500 font-bold"> No strings attached. No credit card required.</span>
@@ -169,27 +169,27 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Video Container - Properly Sized */}
-            <div className="max-w-sm mx-auto mb-12">
-              <div className="relative mb-4">
-                <ScrollTriggeredVideo 
-                  src="/landingpagew.mov"
-                  className="w-full aspect-video"
-                />
-              </div>
-              {/* Video Title Below Video */}
-              <div className="bg-white rounded-lg shadow-lg p-3 border-2 border-accent-500">
-                <div className="flex items-center">
-                  <div className="bg-accent-500 rounded-full p-1.5 mr-2">
-                    <span className="text-white font-bold text-xs">▶</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-base">Why NextServe Works For Free</h4>
-                    <p className="text-gray-600 text-xs">Personal message from our founder</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                         {/* Video Container - Large and Prominent */}
+             <div className="max-w-4xl mx-auto mb-12">
+               <div className="relative mb-6">
+                 <ScrollTriggeredVideo 
+                   src="/landingpagew.mov"
+                   className="w-full aspect-video rounded-xl shadow-2xl border-4 border-accent-500"
+                 />
+               </div>
+               {/* Video Title Below Video */}
+               <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 border-2 border-accent-500 max-w-2xl mx-auto">
+                 <div className="flex items-center">
+                   <div className="bg-accent-500 rounded-full p-2 mr-3">
+                     <span className="text-white font-bold text-sm">▶</span>
+                   </div>
+                   <div>
+                     <h4 className="font-bold text-gray-900 text-lg md:text-xl">Why NextServe Works For Free</h4>
+                     <p className="text-gray-600 text-sm md:text-base">Personal message from our founder</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
 
             {/* Text Content Below Video */}
             <div className="text-center">
@@ -449,31 +449,31 @@ export default function Home() {
                 <h3 className="text-2xl font-black text-gray-900 mb-4">Foundation</h3>
                 <div className="text-4xl font-black text-primary-600 mb-2">€900</div>
                 <p className="text-gray-600">One-time setup</p>
-              </div>
-              
+                  </div>
+                  
               <div className="bg-success-500 text-white rounded-xl p-4 mb-6 text-center">
                 <p className="font-bold text-lg">ROI: 4 members = investment back</p>
-                <p className="text-sm">Then pure profit forever</p>
-              </div>
-
+                    <p className="text-sm">Then pure profit forever</p>
+                </div>
+                
               <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
+                    <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-success-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Professional website + booking system</span>
-                </li>
-                <li className="flex items-start">
+                    </li>
+                    <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-success-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Membership system setup</span>
-                </li>
-                <li className="flex items-start">
+                    </li>
+                    <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-success-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Automated reminders & payments</span>
-                </li>
-                <li className="flex items-start">
+                    </li>
+                    <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-success-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Basic analytics dashboard</span>
-                </li>
-              </ul>
+                    </li>
+                  </ul>
 
               <button
                 onClick={() => setIsBookingOpen(true)}
@@ -495,32 +495,32 @@ export default function Home() {
                 <h3 className="text-2xl font-black text-gray-900 mb-4">Growth</h3>
                 <div className="text-4xl font-black text-accent-600 mb-2">€1,000 + €850/mo</div>
                 <p className="text-gray-600">Setup + monthly service</p>
-              </div>
-              
+                  </div>
+                  
               <div className="bg-accent-500 text-white rounded-xl p-4 mb-6 text-center">
                 <p className="font-bold text-lg">ROI: €4,000+ monthly from Google alone</p>
-                <p className="text-sm">vs €850 cost = 470% ROI</p>
-              </div>
-
+                    <p className="text-sm">vs €850 cost = 470% ROI</p>
+                </div>
+                
               <p className="text-sm font-bold text-gray-900 mb-4">Everything in Foundation, plus:</p>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Google SEO + local optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Referral system automation</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Monthly optimization calls</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Advanced analytics & ROI tracking</span>
-                </li>
-              </ul>
+                    </li>
+                  </ul>
 
               <button
                 onClick={() => setIsBookingOpen(true)}
@@ -536,32 +536,32 @@ export default function Home() {
                 <h3 className="text-2xl font-black mb-4">Scale</h3>
                 <div className="text-4xl font-black text-primary-400 mb-2">€2,500 + €1,800/mo</div>
                 <p className="text-gray-400">Complete done-for-you</p>
-              </div>
+                  </div>
               
               <div className="bg-primary-500/20 border border-primary-400 rounded-xl p-4 mb-6 text-center">
                 <p className="font-bold text-lg text-primary-300">Completely hands-off growth</p>
                 <p className="text-sm text-primary-400">We handle everything</p>
-              </div>
-
+                </div>
+                
               <p className="text-sm font-bold mb-4">Everything in Growth, plus:</p>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-primary-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary-400 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Done-for-you marketing campaigns</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-primary-400 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Dedicated account manager</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-primary-400 mr-3 mt-0.5 flex-shrink-0" />
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Dedicated account manager</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary-400 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Multi-location support</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-primary-400 mr-3 mt-0.5 flex-shrink-0" />
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary-400 mr-3 mt-0.5 flex-shrink-0" />
                   <span>Advanced analytics & reporting</span>
-                </li>
-              </ul>
+                    </li>
+                  </ul>
 
               <button
                 onClick={() => setIsBookingOpen(true)}
@@ -630,7 +630,7 @@ export default function Home() {
           
           <h2 className="text-4xl md:text-6xl font-black mb-8">
             Get Your <span className="text-yellow-400">€4,300 Value Package</span> Completely FREE
-          </h2>
+            </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
             Don't pay thousands for a website and booking system. Get it all FREE in our business diagnosis program.
             <span className="text-yellow-400 font-bold"> Limited spots available!</span>
@@ -646,7 +646,7 @@ export default function Home() {
               <div className="flex items-center">
                 <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0 text-yellow-400" />
                 <span className="text-lg">Online Booking System (€1,500 value)</span>
-              </div>
+                </div>
               <div className="flex items-center">
                 <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0 text-yellow-400" />
                 <span className="text-lg">KPI Dashboard (€800 value)</span>
@@ -675,9 +675,9 @@ export default function Home() {
             </p>
             <p className="text-lg font-bold">
               Next free batch: Not until next month
-            </p>
-          </div>
-          
+                </p>
+              </div>
+              
           <p className="text-gray-400 mt-6 text-lg">
             No credit card • No contracts • No catch • Ready in 48 hours
           </p>
@@ -692,7 +692,7 @@ export default function Home() {
               <div className="flex items-center mb-6">
                 <Heart className="h-10 w-10 text-primary-400 mr-3" />
                 <span className="text-3xl font-black">NextServe</span>
-              </div>
+            </div>
               <p className="text-lg text-gray-300 mb-6">
                 Turning Vienna's veterinary clinics into predictable, profitable businesses.
               </p>
@@ -721,7 +721,7 @@ export default function Home() {
           
           <div className="border-t border-gray-700 mt-12 pt-8 text-center">
             <p className="text-gray-400 text-lg">
-              &copy; 2024 NextServe. All rights reserved.
+              &copy; 2024 NextServe. All rights reserved. 
             </p>
           </div>
         </div>
