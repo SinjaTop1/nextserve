@@ -175,7 +175,6 @@ export default function Home() {
                  src="/landingpagew.mov"
                  className="w-full rounded-lg shadow-lg"
                />
-             </div>
                {/* Video Title */}
                <div className="bg-white rounded-lg shadow-lg p-3 mt-4 border-2 border-accent-500">
                  <div className="flex items-center">
