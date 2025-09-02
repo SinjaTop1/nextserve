@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     creator: '@NextServeAgency',
   },
   alternates: {
-    canonical: 'https://nextserve.org',
+    canonical: 'https://nextserve.org/',
     languages: {
-      'en-AT': 'https://nextserve.org',
-      'de-AT': 'https://nextserve.org/de',
+      'en-AT': 'https://nextserve.org/',
+      'de-AT': 'https://nextserve.org/de/',
     },
   },
   category: 'Veterinary Services',
