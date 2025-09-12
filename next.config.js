@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  trailingSlash: false,
-  skipTrailingSlashRedirect: true,
+  trailingSlash: true,
+  skipTrailingSlashRedirect: false,
   output: 'export',
   distDir: 'dist',
   images: {
