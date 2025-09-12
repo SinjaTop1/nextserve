@@ -102,3 +102,4 @@ Meta tags are configured in `app/layout.tsx`.
 ## License
 
 Private project for NextServe.
+# NextServe Academy Live
