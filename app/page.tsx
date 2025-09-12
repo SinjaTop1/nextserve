@@ -40,13 +40,21 @@ export default function Home() {
               <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-primary-500 mr-1.5 sm:mr-2" aria-hidden="true" />
               <span className="text-xl sm:text-2xl font-bold text-gray-900">NextServe</span>
             </div>
-            <button 
-              onClick={() => handleBookingClick('nav_button')}
-              className="bg-red-500 hover:bg-red-600 text-white font-bold text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg border-2 border-yellow-400 animate-pulse whitespace-nowrap"
-              aria-label="Get your free veterinary website - Book consultation"
-            >
-              🎁 GET FREE WEBSITE
-            </button>
+            <div className="flex items-center space-x-4">
+              <a 
+                href="/academy" 
+                className="text-gray-600 hover:text-accent-500 font-medium transition-colors hidden sm:block"
+              >
+                🎓 Academy
+              </a>
+              <button 
+                onClick={() => handleBookingClick('nav_button')}
+                className="bg-red-500 hover:bg-red-600 text-white font-bold text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg border-2 border-yellow-400 animate-pulse whitespace-nowrap"
+                aria-label="Get your free veterinary website - Book consultation"
+              >
+                🎁 GET FREE WEBSITE
+              </button>
+            </div>
           </div>
         </div>
       </nav>
