@@ -29,13 +29,36 @@ export default function NextServeAcademy() {
     experience: ''
   })
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     trackEvent('template_download', 'academy', 'free_template', 1)
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData)
-    setIsFormOpen(false)
-    // Show success message or redirect
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mjkezrkg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          business: formData.business,
+          experience: formData.experience,
+          _subject: 'New Academy Waitlist Registration',
+        }),
+      })
+
+      if (response.ok) {
+        setIsFormOpen(false)
+        setFormData({ name: '', email: '', business: '', experience: '' })
+        alert('Thank you! You\'ve been added to the waitlist. We\'ll notify you when the course launches!')
+      } else {
+        alert('There was an error submitting your form. Please try again.')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      alert('There was an error submitting your form. Please try again.')
+    }
   }
 
   const handleDownloadClick = (source: string) => {
@@ -451,7 +474,7 @@ export default function NextServeAcademy() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-accent-400 mr-4" />
-                  <span className="text-lg">academy@nextserve.org</span>
+                  <span className="text-lg">nextserveagency@gmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-6 w-6 text-accent-400 mr-4" />
