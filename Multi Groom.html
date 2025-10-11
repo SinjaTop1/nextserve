@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Groom - Зоосалон в Москве</title>
+    <meta name="description" content="Бережный груминг для домашних питомцев всех размеров и пород. Профессиональный уход - залог безупречного внешнего вида и здоровья вашего питомца!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --accent-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --soft-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --primary-color: #667eea;
+            --primary-dark: #5568d3;
+            --secondary-color: #764ba2;
+            --accent-color: #f5576c;
+            --accent-soft: #f093fb;
+            --text-dark: #1a202c;
+            --text-medium: #4a5568;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.16);
+            --border-radius: 32px;
+            --border-radius-lg: 24px;
+            --border-radius-sm: 16px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: #fafbfc;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Section */
+        .hero {
+            background: var(--primary-gradient);
+            padding: 100px 24px 140px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 25s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite reverse;
+        }
+
+        /* Animated particles */
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            animation: particle-float 15s infinite ease-in-out;
+        }
+
+        .particle:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 20s;
+        }
+
+        .particle:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            left: 80%;
+            animation-delay: 3s;
+            animation-duration: 18s;
+        }
+
+        .particle:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            top: 40%;
+            left: 70%;
+            animation-delay: 6s;
+            animation-duration: 22s;
+        }
+
+        .particle:nth-child(4) {
+            width: 50px;
+            height: 50px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 9s;
+            animation-duration: 16s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            33% { transform: translate(30px, -30px) scale(1.05) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) scale(0.95) rotate(240deg); }
+        }
+
+        @keyframes particle-float {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.15; }
+            25% { transform: translateY(-40px) translateX(20px) scale(1.1); opacity: 0.25; }
+            50% { transform: translateY(-80px) translateX(-20px) scale(0.9); opacity: 0.15; }
+            75% { transform: translateY(-40px) translateX(20px) scale(1.05); opacity: 0.2; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 40px;
+            background: var(--bg-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            animation: logo-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes logo-pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4); }
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: logo-ring 4s linear infinite;
+        }
+
+        @keyframes logo-ring {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--bg-white);
+            margin-bottom: 24px;
+            position: relative;
+            letter-spacing: -0.03em;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.375rem;
+            color: var(--bg-white);
+            max-width: 750px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 400;
+            line-height: 1.9;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 50px;
+            color: var(--bg-white);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: transparent;
+            margin: -80px auto 0;
+            max-width: 1280px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section {
+            padding: 80px 24px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            letter-spacing: -0.03em;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: var(--primary-gradient);
+            border-radius: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-medium);
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 32px auto 64px;
+            font-weight: 400;
+            line-height: 1.9;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: var(--bg-white);
+            padding: 22px 64px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: 0 12px 40px rgba(245, 87, 108, 0.4);
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: -0.01em;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button::after {
+            content: '→';
+            position: absolute;
+            right: 32px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover::after {
+            right: 28px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(245, 87, 108, 0.5);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 56px 32px;
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--accent-gradient);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        /* Contact Methods */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 56px;
+        }
+
+        .contact-card {
+            background: var(--bg-white);
+            padding: 40px 32px;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .contact-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 24px;
+            background: var(--primary-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .contact-text {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 56px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 48px 32px;
+            background: var(--bg-white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 56px;
+            margin-bottom: 24px;
+        }
+
+        .feature-title {
+            font-weight: 700;
+            font-size: 1.375rem;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .feature-text {
+            color: var(--text-light);
+            font-size: 1.0625rem;
+            line-height: 1.8;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 56px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius-lg);
+            padding-top: 100%;
+            background: var(--bg-light);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .gallery-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 56px;
+        }
+
+        .team-card {
+            background: var(--bg-white);
+            padding: 48px 32px;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+        }
+
+        .team-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .team-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid transparent;
+            background: var(--primary-gradient);
+            padding: 4px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .team-card:hover .team-photo {
+            transform: scale(1.05);
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .team-name {
+            font-weight: 700;
+            font-size: 1.375rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .team-role {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .team-description {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--primary-gradient);
+            padding: 64px 56px;
+            border-radius: var(--border-radius);
+            color: var(--bg-white);
+            margin-top: 56px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .info-box h3 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-list {
+            list-style: none;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-list li {
+            padding: 20px 0 20px 44px;
+            position: relative;
+            line-height: 1.9;
+            font-size: 1.0625rem;
+        }
+
+        .info-list li:before {
+            content: '🐾';
+            position: absolute;
+            left: 0;
+            top: 20px;
+            font-size: 24px;
+        }
+
+        /* Rules Box */
+        .rules-box {
+            background: var(--bg-white);
+            padding: 64px 56px;
+            border-radius: var(--border-radius);
+            margin-top: 56px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .rules-box h3 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 48px;
+            text-align: center;
+            color: var(--text-dark);
+        }
+
+        .rules-list {
+            list-style: none;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .rules-list li {
+            padding: 24px 0 24px 64px;
+            position: relative;
+            line-height: 1.9;
+            color: var(--text-medium);
+            font-size: 1.0625rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .rules-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rules-list li:before {
+            content: attr(data-number);
+            position: absolute;
+            left: 0;
+            top: 24px;
+            width: 44px;
+            height: 44px;
+            background: var(--primary-gradient);
+            color: var(--bg-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Social Links */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 56px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            padding: 24px 28px;
+            background: var(--bg-white);
+            border-radius: var(--border-radius-lg);
+            text-decoration: none;
+            color: var(--bg-white);
+            font-weight: 600;
+            transition: var(--transition);
+            gap: 16px;
+            box-shadow: var(--shadow-md);
+            font-size: 1.0625rem;
+        }
+
+        .social-link:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .social-link.vk {
+            background: linear-gradient(135deg, #0077ff 0%, #4a90e2 100%);
+        }
+
+        .social-link.telegram {
+            background: linear-gradient(135deg, #0088cc 0%, #229ed9 100%);
+        }
+
+        .social-link.youtube {
+            background: linear-gradient(135deg, #ff0000 0%, #ff4444 100%);
+        }
+
+        .social-icon {
+            font-size: 28px;
+        }
+
+        /* Divider */
+        .divider {
+            text-align: center;
+            margin: 72px 0 48px;
+            font-size: 56px;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+            position: relative;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color));
+        }
+
+        .divider::before {
+            right: calc(100% + 20px);
+        }
+
+        .divider::after {
+            left: calc(100% + 20px);
+            background: linear-gradient(90deg, var(--primary-color), transparent);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #0f1419 100%);
+            color: var(--bg-white);
+            padding: 80px 40px 48px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 32px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-info {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            line-height: 2;
+            margin-bottom: 12px;
+        }
+
+        .footer-email {
+            color: var(--accent-soft);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .footer-email:hover {
+            color: var(--accent-color);
+        }
+
+        /* Accordion */
+        .accordion {
+            max-width: 1000px;
+            margin: 56px auto 0;
+        }
+
+        .accordion-item {
+            background: var(--bg-white);
+            border-radius: var(--border-radius-lg);
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: var(--transition);
+        }
+
+        .accordion-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .accordion-header {
+            padding: 32px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.375rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.05) 0%, transparent 100%);
+        }
+
+        .accordion-icon {
+            font-size: 1.5rem;
+            transition: var(--transition);
+            color: var(--primary-color);
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 800px;
+        }
+
+        .accordion-body {
+            padding: 0 32px 32px;
+            line-height: 1.9;
+            color: var(--text-light);
+            font-size: 1.0625rem;
+        }
+
+        .accordion-body p {
+            margin-bottom: 16px;
+        }
+
+        .accordion-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Section wrapper for white backgrounds */
+        .section-white {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                min-height: 550px;
+                padding: 80px 24px 120px;
+            }
+
+            .hero-title {
+                font-size: 3.25rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .particle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 500px;
+                padding: 64px 20px 100px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+
+            .hero-badge {
+                font-size: 0.875rem;
+                padding: 10px 20px;
+                margin-top: 24px;
+            }
+
+            .logo {
+                width: 140px;
+                height: 140px;
+                margin-bottom: 32px;
+            }
+
+            .logo img {
+                width: 110px;
+                height: 110px;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.125rem;
+                margin: 24px auto 48px;
+            }
+
+            .section {
+                padding: 64px 20px;
+            }
+
+            .info-box,
+            .rules-box {
+                padding: 48px 28px;
+            }
+
+            .info-box h3,
+            .rules-box h3 {
+                font-size: 1.875rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 16px;
+            }
+
+            .team-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid,
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer {
+                padding: 64px 24px 40px;
+            }
+
+            .cta-button {
+                padding: 20px 48px;
+                font-size: 1.125rem;
+            }
+
+            .cta-section {
+                padding: 48px 24px;
+            }
+
+            .accordion-header {
+                font-size: 1.25rem;
+                padding: 28px 24px;
+            }
+
+            .accordion-body {
+                padding: 0 24px 28px;
+                font-size: 1rem;
+            }
+
+            .rules-list li {
+                padding: 20px 0 20px 56px;
+                font-size: 1rem;
+            }
+
+            .rules-list li:before {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .divider::before,
+            .divider::after {
+                width: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                min-height: 450px;
+                padding: 56px 16px 80px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-badge {
+                font-size: 0.8125rem;
+                padding: 8px 16px;
+                margin-top: 20px;
+            }
+
+            .logo {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 28px;
+                border-width: 6px;
+            }
+
+            .logo img {
+                width: 95px;
+                height: 95px;
+            }
+
+            .section {
+                padding: 56px 16px;
+            }
+
+            .section-title {
+                font-size: 1.875rem;
+            }
+
+            .section-title::after {
+                width: 60px;
+                height: 4px;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                margin: 20px auto 40px;
+            }
+
+            .info-box,
+            .rules-box {
+                padding: 40px 20px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .divider {
+                margin: 56px 0 40px;
+                font-size: 40px;
+            }
+
+            .divider::before,
+            .divider::after {
+                display: none;
+            }
+
+            .contact-card,
+            .feature-card,
+            .team-card {
+                padding: 36px 24px;
+            }
+
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 1rem;
+            }
+
+            .cta-button::after {
+                right: 24px;
+            }
+
+            .cta-section {
+                padding: 40px 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="logo">
+                <img src="https://i.taplink.st/a/0/f/c/9/217793.png?101" alt="Multi Groom Logo">
+            </div>
+            <h1 class="hero-title">Зоосалон Multi Groom</h1>
+            <p class="hero-subtitle">Бережный груминг для домашних питомцев всех размеров и пород</p>
+            <div class="hero-badge">
+                <span>🐾</span>
+                <span>14+ лет профессионального опыта</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <a href="https://dikidi.net/357527" target="_blank" class="cta-button">Онлайн-запись на груминг</a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section section-white">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <p class="section-subtitle">Записать питомца на груминг или консультацию по проблемам поведения (только онлайн занятия) в удобном мессенджере</p>
+            
+            <div class="contact-grid">
+                <a href="https://api.whatsapp.com/send?phone=79933632203&text=" target="_blank" class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <div class="contact-title">WhatsApp</div>
+                    <div class="contact-text">Быстрые ответы</div>
+                </a>
+                
+                <a href="https://t.me/Multi_groom" target="_blank" class="contact-card">
+                    <div class="contact-icon">✈️</div>
+                    <div class="contact-title">Telegram</div>
+                    <div class="contact-text">Онлайн поддержка</div>
+                </a>
+                
+                <a href="tel:+79933632203" class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-title">8-993-363-22-03</div>
+                    <div class="contact-text">Звоните в любое время</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="section section-white">
+            <div class="divider">🐾</div>
+            <h2 class="section-title">Наш салон</h2>
+            <p class="section-subtitle">Ул. Новое шоссе 11к1 (Бутово парк 2)</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://taplink.st/p/8/3/7/0/54416024.jpg?0" alt="Интерьер салона 1" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://taplink.st/p/2/1/3/b/60697776.jpg?0" alt="Интерьер салона 2" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://taplink.st/p/8/e/5/b/60697782.jpg?0" alt="Интерьер салона 3" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://taplink.st/p/f/6/8/4/54416096.jpg?0" alt="Интерьер салона 4" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section section-white">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <div class="feature-title">Профессионалы</div>
+                    <div class="feature-text">Вежливые добрые профессионалы своего дела</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <div class="feature-title">Удобная оплата</div>
+                    <div class="feature-text">Принимаем оплату картой, наличными и переводом</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <div class="feature-title">Комфорт</div>
+                    <div class="feature-text">Комфортные условия для питомцев и хозяев</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="section section-white">
+            <div class="divider">🐾</div>
+            <h2 class="section-title">Мы в соцсетях</h2>
+            <p class="section-subtitle">Следите за нашими работами и новостями</p>
+            
+            <div class="social-grid">
+                <a href="https://instagram.com/multi_groom/" target="_blank" class="social-link instagram">
+                    <span class="social-icon">📷</span>
+                    <span>multi_groom</span>
+                </a>
+                
+                <a href="https://vk.com/multi_groom" target="_blank" class="social-link vk">
+                    <span class="social-icon">🔵</span>
+                    <span>Группа в ВК</span>
+                </a>
+                
+                <a href="https://t.me/multi_groom_pets" target="_blank" class="social-link telegram">
+                    <span class="social-icon">✈️</span>
+                    <span>Телеграм канал</span>
+                </a>
+                
+                <a href="https://youtube.com/@Dasha-pets" target="_blank" class="social-link youtube">
+                    <span class="social-icon">▶️</span>
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Ozone Baths Section -->
+        <section class="section section-white">
+            <div class="divider">💜</div>
+            <h2 class="section-title">Озоновые ванны 🌸</h2>
+            
+            <div class="info-box">
+                <h3>Для чего нужен озон?</h3>
+                <ul class="info-list">
+                    <li>Помогает от выпадения, облысения, алопеции</li>
+                    <li>Успокаивает, снимает раздражение, обеззараживает</li>
+                    <li>Выводит линяющую шерсть</li>
+                    <li>Усиливает действие масок, обогащает кислородом</li>
+                    <li>От грибков на коже и шерсти</li>
+                    <li>От перхоти, сухости кожи и шерсти</li>
+                    <li>Оказывает противовоспалительное и ранозаживляющее воздействие</li>
+                    <li>Успокаивает, расслабляет, снимает стресс</li>
+                    <li>Супер очищающий эффект</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section section-white">
+            <h2 class="section-title">Наша команда</h2>
+            <p class="section-subtitle">Профессиональные мастера с большим опытом работы</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://taplink.st/p/8/9/5/2/57103443.jpg?0" alt="Ольга">
+                    </div>
+                    <div class="team-name">Ольга</div>
+                    <div class="team-role">Топ-грумер</div>
+                    <div class="team-description">Грумер с 14-летним стажем, делает комплексный уход всех пород, а также качественный тримминг. Очень нежно и аккуратно общается с животными. Владелица питомника Сиба-ину.</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://taplink.st/p/8/7/a/b/57103329.jpg?0" alt="Даяна">
+                    </div>
+                    <div class="team-name">Даяна</div>
+                    <div class="team-role">Ведущий грумер</div>
+                    <div class="team-description">Грумер с 3х летним стажем, знает зоопсихологию, а также является руководителем МультиГрум. Делает комплексный уход всем породам и котикам, так же чистку зубов УЗ. 🐾 Очень дружелюбна и быстро находит подход к питомцу 🐶</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://taplink.st/p/2/e/9/7/63023244.jpg?0" alt="Елена">
+                    </div>
+                    <div class="team-name">Елена</div>
+                    <div class="team-role">Ведущий грумер</div>
+                    <div class="team-description">Елена делает комплексный уход всем породам и котикам, специализируется на ши-тцу 🐶 Елена очень добра и ласкова с питомцами 🐾</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://taplink.st/p/a/d/d/f/64524977.jpg?0" alt="Агата">
+                    </div>
+                    <div class="team-name">Агата</div>
+                    <div class="team-role">Грумер</div>
+                    <div class="team-description">Агата делает комплексный всем породам и котикам, также работает с тримминговочными породами 🐶 Агата всегда стремится к идеалу в работе, и обладает отменным чувством юмора 🐾</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://taplink.st/p/c/0/3/f/62514681.png?0" alt="Ирина">
+                    </div>
+                    <div class="team-name">Ирина</div>
+                    <div class="team-role">Грумер</div>
+                    <div class="team-description">Ирина специализируется на крупных породах и экспресс-линьках любых пород, также работает с котиками и делает комплексный уход шпицам и йоркам 🐶 У Ирины кинологическое образование 🐾</div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://taplink.st/p/4/7/3/a/57103487.jpg?0" alt="Дарья">
+                    </div>
+                    <div class="team-name">Дарья</div>
+                    <div class="team-role">Зоопсихолог</div>
+                    <div class="team-description">Практикующий зоопсихолог MultiGroom, ведет онлайн-консультации по проблемам поведения питомцев.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section class="section section-white">
+            <div class="divider">💜</div>
+            <h2 class="section-title">Памятка</h2>
+            <p class="section-subtitle">Перед посещением зоосалона</p>
+            
+            <div class="rules-box">
+                <ul class="rules-list">
+                    <li data-number="1">От вас не требуется никакой подготовки питомца к грумингу (мытье, сушка), мы все сделаем сами. 🫧🛁 Но очень приветствуется домашнее вычесывание колтунов 💜, или сообщите о них нам, чтобы мы заложили больше времени. 💁🏼‍♀️</li>
+                    
+                    <li data-number="2">Обязательно выгуливайте питомца перед посещением груминга, но не более 20 минут. 🐕‍🦺🚾</li>
+                    
+                    <li data-number="3">Не приходите в салон заранее, а в свое время, чтобы питомец лишний раз не волновался от длительного ожидания. 🕐</li>
+                    
+                    <li data-number="4">Также можно взять с собой лизательный коврик или вкусняшки, для большего комфорта питомца на процедурах. 🐶🍜</li>
+                    
+                    <li data-number="5">Мы не используем никакие седативные вещества. В нашем салоне исключительно бережное отношение к животным. 🐾🫂 Наши мастера знают язык тела собаки и зоопсихологию. 😌</li>
+                    
+                    <li data-number="6">Четко формируйте свои пожелание в стрижке, либо мастер поможет вам с выбором. 🐩✂️</li>
+                    
+                    <li data-number="7">Вы можете подождать своего питомца в салоне, но рекомендуем это время потратить с пользой для себя 😇, особо переживательные питомцы будут чувствовать ваше присутствие и волнение, от чего и сами будут нервничать, что может задерживает процесс. 🤫</li>
+                    
+                    <li data-number="8">Мы не запрещаем присутствовать на груминг больших и линяющих пород, но по предварительному согласованию через администратора, если в этом есть необходимость. 🙏🏻😇</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="section section-white">
+            <h2 class="section-title">Нам можно и нужно доверять!</h2>
+            
+            <div class="accordion">
+                <div class="accordion-item active">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Почему стоит выбрать Multi Groom?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>• Мастера грумеры с большим опытом работы</strong></p>
+                            <p><strong>• В штате есть грумер-зоопсихолог</strong>, который найдет подход к абсолютно любому питомцу, даже к самым агрессивным (работаем со сложным характером, но в длительной терапии)</p>
+                            <p><strong>• Основательница Multi Groom имеет большой опыт общения с собаками</strong>, с детства в семье был питомник. Постоянная практика на груминге, большая часть клиентов уже гораздо комфортнее себя чувствуют на процедурах, так как есть понимание их языка телодвижения.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-title">Multi Groom</div>
+            <div class="footer-info">ИП Митягина Ю.Н.</div>
+            <div class="footer-info">ИНН 643920034463</div>
+            <div class="footer-info">
+                <a href="mailto:zoosalon.multi.groom@gmail.com" class="footer-email">zoosalon.multi.groom@gmail.com</a>
+            </div>
+            <div class="footer-info" style="margin-top: 32px; opacity: 0.5;">
+                © 2024 Multi Groom. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
