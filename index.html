@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Multi Groom - Зоосалон в Москве</title>
     <meta name="description" content="Бережный груминг для домашних питомцев всех размеров и пород. Профессиональный уход - залог безупречного внешнего вида и здоровья вашего питомца!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1053,42 +1053,48 @@
 
         @media (max-width: 480px) {
             .hero {
-                min-height: 450px;
-                padding: 56px 16px 80px;
+                min-height: 100vh;
+                min-height: 100dvh; /* Dynamic viewport height for mobile */
+                padding: 48px 20px 64px;
             }
 
             .hero-title {
-                font-size: 2rem;
+                font-size: 2.25rem;
+                line-height: 1.2;
+                margin-bottom: 20px;
             }
 
             .hero-subtitle {
-                font-size: 1rem;
+                font-size: 1.0625rem;
+                line-height: 1.65;
+                padding: 0 8px;
             }
 
             .hero-badge {
-                font-size: 0.8125rem;
-                padding: 8px 16px;
-                margin-top: 20px;
+                font-size: 0.875rem;
+                padding: 10px 20px;
+                margin-top: 24px;
             }
 
             .logo {
-                width: 120px;
-                height: 120px;
-                margin-bottom: 28px;
+                width: 130px;
+                height: 130px;
+                margin-bottom: 32px;
                 border-width: 6px;
             }
 
             .logo img {
-                width: 95px;
-                height: 95px;
+                width: 105px;
+                height: 105px;
             }
 
             .section {
-                padding: 56px 16px;
+                padding: 56px 20px;
             }
 
             .section-title {
-                font-size: 1.875rem;
+                font-size: 2rem;
+                line-height: 1.2;
             }
 
             .section-title::after {
@@ -1097,8 +1103,9 @@
             }
 
             .section-subtitle {
-                font-size: 1rem;
-                margin: 20px auto 40px;
+                font-size: 1.0625rem;
+                margin: 24px auto 40px;
+                line-height: 1.7;
             }
 
             .info-box,
@@ -1127,17 +1134,133 @@
                 padding: 36px 24px;
             }
 
+            /* Enhanced mobile CTA button */
             .cta-button {
-                padding: 18px 40px;
-                font-size: 1rem;
+                padding: 22px 32px;
+                font-size: 1.125rem;
+                font-weight: 700;
+                max-width: 100%;
+                width: 100%;
+                letter-spacing: -0.01em;
+                min-height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                border-radius: 16px;
             }
 
             .cta-button::after {
-                right: 24px;
+                right: 20px;
+                font-size: 1.75rem;
             }
 
             .cta-section {
-                padding: 40px 20px;
+                padding: 32px 20px;
+                margin: 0 -4px;
+            }
+
+            /* Sticky mobile booking button */
+            .mobile-cta-fixed {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: var(--bg-white);
+                padding: 16px 20px 24px;
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+                z-index: 1000;
+                display: none;
+            }
+
+            .mobile-cta-fixed .cta-button {
+                margin: 0;
+                border-radius: 16px;
+                padding: 20px 32px;
+                font-size: 1.125rem;
+            }
+
+            /* Contact cards more touch-friendly */
+            .contact-card {
+                padding: 32px 24px;
+                min-height: 160px;
+            }
+
+            .contact-icon {
+                width: 64px;
+                height: 64px;
+                font-size: 28px;
+            }
+
+            .contact-title {
+                font-size: 1.125rem;
+            }
+
+            /* Better mobile typography */
+            body {
+                font-size: 16px;
+                -webkit-text-size-adjust: 100%;
+            }
+
+            .team-name {
+                font-size: 1.25rem;
+            }
+
+            .feature-title {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Extra optimizations for very small screens */
+        @media (max-width: 380px) {
+            .hero {
+                padding: 40px 16px 56px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .logo {
+                width: 110px;
+                height: 110px;
+            }
+
+            .logo img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .cta-button {
+                padding: 20px 24px;
+                font-size: 1.0625rem;
+            }
+        }
+
+        /* Landscape mobile optimization */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero {
+                min-height: auto;
+                padding: 60px 20px 80px;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+
+            .logo img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
             }
         }
 
@@ -1421,6 +1544,13 @@
         </section>
     </main>
 
+    <!-- Sticky Mobile CTA Button -->
+    <div class="mobile-cta-fixed" id="mobileCtaFixed">
+        <a href="https://dikidi.net/357527" target="_blank" class="cta-button">
+            Онлайн-запись на груминг
+        </a>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -1473,6 +1603,74 @@
         document.querySelectorAll('.section').forEach(section => {
             observer.observe(section);
         });
+
+        // Mobile sticky CTA button control
+        const mobileCtaFixed = document.getElementById('mobileCtaFixed');
+        const ctaSection = document.querySelector('.cta-section');
+        
+        if (mobileCtaFixed && ctaSection && window.innerWidth <= 480) {
+            let lastScrollTop = 0;
+            let ticking = false;
+
+            function updateStickyButton() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const ctaSectionRect = ctaSection.getBoundingClientRect();
+                const ctaSectionBottom = ctaSectionRect.bottom + window.scrollY;
+                
+                // Show sticky button when scrolled past the main CTA section
+                if (scrollTop > ctaSectionBottom + 200 && scrollTop > lastScrollTop) {
+                    mobileCtaFixed.style.display = 'block';
+                    setTimeout(() => {
+                        mobileCtaFixed.style.opacity = '1';
+                        mobileCtaFixed.style.transform = 'translateY(0)';
+                    }, 10);
+                } else if (scrollTop < ctaSectionBottom || scrollTop < lastScrollTop) {
+                    mobileCtaFixed.style.opacity = '0';
+                    mobileCtaFixed.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        if (mobileCtaFixed.style.opacity === '0') {
+                            mobileCtaFixed.style.display = 'none';
+                        }
+                    }, 300);
+                }
+                
+                lastScrollTop = scrollTop;
+                ticking = false;
+            }
+
+            // Initialize sticky button style
+            mobileCtaFixed.style.opacity = '0';
+            mobileCtaFixed.style.transform = 'translateY(20px)';
+            mobileCtaFixed.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateStickyButton();
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // Initial check
+            updateStickyButton();
+        }
+
+        // Optimize mobile touch interactions
+        if ('ontouchstart' in window) {
+            document.body.classList.add('touch-device');
+            
+            // Add active states for touch
+            document.querySelectorAll('.cta-button, .contact-card, .social-link').forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                }, { passive: true });
+                
+                element.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                }, { passive: true });
+            });
+        }
     </script>
 </body>
 </html>
