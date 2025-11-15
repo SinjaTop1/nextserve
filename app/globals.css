@@ -298,13 +298,15 @@ a {
   font-size: 1.125rem;
   font-weight: 700;
   cursor: pointer;
-  transition: var(--transition);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
   box-shadow: 0 12px 40px rgba(245, 87, 108, 0.4);
   position: relative;
   overflow: hidden;
   margin-top: 8px;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .submit-button::before {
@@ -416,11 +418,13 @@ a {
   padding: 48px 32px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.04);
   text-align: center;
   position: relative;
   overflow: hidden;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .benefit-card::before {
@@ -432,7 +436,8 @@ a {
   height: 4px;
   background: var(--primary-gradient);
   transform: scaleX(0);
-  transition: var(--transition);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left;
 }
 
 .benefit-card:hover::before {
@@ -574,22 +579,32 @@ a {
     min-height: 100vh;
     min-height: 100dvh;
     padding: 48px 20px 64px;
+    will-change: auto;
   }
   
   .hero-title {
     font-size: 2rem;
     line-height: 1.2;
     margin-bottom: 20px;
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
   
   .hero-subtitle {
     font-size: 1.125rem;
     line-height: 1.65;
+    animation: none;
+    opacity: 0.95;
+    transform: none;
   }
   
   .hero-icon {
     font-size: 56px;
     margin-bottom: 24px;
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
   
   .waitlist-section {
@@ -614,10 +629,23 @@ a {
     font-size: 1.75rem;
   }
   
+  .value-highlight {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
   .form-input,
   .submit-button {
     padding: 16px 20px;
     font-size: 1rem;
+  }
+  
+  .submit-button {
+    transition: opacity 0.2s ease, transform 0.1s ease;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    transform: none;
   }
   
   .particle {
@@ -634,25 +662,47 @@ a {
     gap: 24px;
     max-width: 100%;
   }
+  
+  .benefit-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .benefit-card::before {
+    transition: transform 0.2s ease;
+  }
+  
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
     min-height: 500px;
     padding: 64px 20px 100px;
+    will-change: auto;
   }
   
   .hero-title {
     font-size: 2.5rem;
+    animation-duration: 0.4s;
   }
   
   .hero-subtitle {
     font-size: 1.25rem;
+    animation-duration: 0.4s;
   }
   
   .hero-icon {
     font-size: 64px;
     margin-bottom: 24px;
+    animation-duration: 0.4s;
   }
   
   .section-title {
@@ -684,14 +734,40 @@ a {
     font-size: 1.125rem;
   }
   
+  .value-highlight {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
   .benefits-grid {
     grid-template-columns: 1fr;
     gap: 24px;
     max-width: 100%;
   }
   
+  .benefit-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .submit-button {
+    transition: opacity 0.2s ease, transform 0.1s ease;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+  
   .particle {
     display: none;
+  }
+  
+  .hero::before,
+  .hero::after {
+    animation-duration: 40s;
   }
 }
 
@@ -733,4 +809,41 @@ a {
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+/* Optimize animations for mobile */
+@media (max-width: 768px) {
+  .hero,
+  .hero::before,
+  .hero::after {
+    will-change: auto;
+  }
+  
+  .benefit-card,
+  .submit-button {
+    will-change: auto;
+  }
+  
+  /* Faster, simpler animations on mobile */
+  .hero-title,
+  .hero-subtitle,
+  .hero-icon {
+    animation-duration: 0.3s;
+  }
+  
+  .animate-fade-in {
+    animation-duration: 0.3s;
+  }
+}
+
+/* Disable expensive effects on mobile */
+@media (max-width: 768px) and (hover: none) {
+  .benefit-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    transform: none;
+  }
 }
