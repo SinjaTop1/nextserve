@@ -5,9 +5,9 @@ import StructuredData from './components/StructuredData'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextserve.org'),
-  title: 'NextServe - Get in Touch | Contact Us',
-  description: 'Connect with NextServe. Book a meeting, call us, or send us an email. We\'re based in Vienna, Austria and ready to help.',
-  keywords: 'NextServe contact, Vienna business services, book meeting, schedule call',
+  title: 'Join the Waitlist - NextServe',
+  description: 'Be the first to know when our all-in-one veterinary subscription model arrives at your vet. Preventive care that saves pets and money.',
+  keywords: 'veterinary subscription, preventive pet care, vet care waitlist, pet health subscription',
   authors: [{ name: 'NextServe Agency' }],
   creator: 'NextServe Agency',
   publisher: 'NextServe Agency',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     locale: 'en_AT',
     url: 'https://nextserve.org',
     siteName: 'NextServe',
-    title: 'NextServe - Get in Touch | Contact Us',
-    description: 'Connect with NextServe. Book a meeting, call us, or send us an email. We\'re based in Vienna, Austria.',
+    title: 'Join the Waitlist - NextServe',
+    description: 'Be the first to know when our all-in-one veterinary subscription model arrives at your vet. Preventive care that saves pets and money.',
     images: [
       {
         url: '/og-image.jpg',
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NextServe - Get in Touch | Contact Us',
-    description: 'Connect with NextServe. Book a meeting, call us, or send us an email.',
+    title: 'Join the Waitlist - NextServe',
+    description: 'Be the first to know when our all-in-one veterinary subscription model arrives at your vet.',
     images: ['/og-image.jpg'],
     creator: '@NextServeAgency',
   },
