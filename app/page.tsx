@@ -12,14 +12,22 @@ export default function Home() {
     setIsSubmitting(true)
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      console.log('Waitlist signup:', {
-        email: formData.email.trim(),
-        name: formData.name.trim() || 'Anonymous',
-        timestamp: new Date().toISOString()
+      const response = await fetch('https://formspree.io/f/mldaleje', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email.trim(),
+          name: formData.name.trim() || 'Anonymous',
+          _subject: 'NextServe Waitlist Signup',
+          timestamp: new Date().toISOString()
+        }),
       })
+
+      if (!response.ok) {
+        throw new Error('Form submission failed')
+      }
       
       setShowSuccess(true)
       setFormData({ email: '', name: '' })
